@@ -1,396 +1,396 @@
 weapon_name,damage_class,progression_tier,progression_rank,dps_single_target,dps_multi_target,base_damage,knockback,crit_chance_bonus,use_time_ticks,use_animation_ticks,attacks_per_second,shoot_speed,mana_cost,item_value_copper,rarity_tier,autoswing,item_id,measurement_notes
-Zenith,Melee,Post-Moonlord,16,4800,13000,190,6.5,10,10,30,6,16,0,1000000,10,True,4956,
-Last Prism,Mage,Post-Moonlord,16,3657,1142,100,0.25,0,10,10,6,30,12,500000,10,False,3541,Fully charged
-Star Wrath,Melee,Post-Moonlord,16,2700,5800,170,6.5,0,16,16,3.75,8,0,1000000,10,True,3065,
-Terrarian,Melee,Post-Moonlord,16,2200,4600,190,6.5,10,25,25,2.4,16,0,500000,10,False,3389,
-Meowmere,Melee,Post-Moonlord,16,2100,6400,200,6.5,0,14,14,4.29,12,0,1000000,10,True,3063,
-Lunar Flare,Mage,Post-Moonlord,16,1974,5543,100,4.5,0,10,10,6,10,9,500000,10,True,3570,
-Celebration Mk.2,Ranger,Post-Moonlord,16,1709,2821,50,10,0,6,6,10,17,0,500000,10,True,3930,If all rockets hit
-Solar Eruption,Melee,Post-Cultist,15,1500,4300,105,2,0,20,20,3,24,0,500000,10,True,3473,Close to target
-Bubble Gun,Mage,Post-WoF,7,1467,,70,3,0,9,9,6.67,15,5,250000,8,True,2623,Does not pierce
-Starlight,Melee,Post-EoL,14,1300,4000,80,4,10,6,18,10,15,0,250000,8,False,4923,
-S.D.M.G,Ranger,Post-Moonlord,16,1256,,85,2.5,10,5,5,12,12,0,750000,10,True,1553,Does not pierce
-Nebula Arcanum,Mage,Post-Cultist,15,1254,2183,70,5,0,30,30,2,7,30,500000,10,True,3476,
-Laser Machine Gun,Mage,Post-Golem,13,1210,,60,2,0,20,20,3,20,6,500000,8,False,2795,Does not pierce
-Flying Dragon,Melee,Post-Plantera,12,1200,3100,180,5.5,0,20,20,3,17,0,250000,8,True,3827,
-Daybreak,Melee,Post-Cultist,15,1100,,150,5,0,16,16,3.75,10,0,500000,10,True,3543,Doesn't Pierce
-Nebula Blaze,Mage,Post-Cultist,15,1094,2123,130,3,0,12,12,5,6,12,500000,10,True,3542,
-Razor Pine,Mage,Post-Plantera,12,1067,,48,3.25,0,8,8,7.5,12,5,450000,8,True,1930,
-Stellar Tune,Mage,Post-EoL,14,1056,3073,85,1.5,20,6,12,10,1,12,500000,5,True,4715,
-Vortex Beater,Ranger,Post-Cultist,15,976,1060,50,2,0,20,20,3,20,0,500000,10,True,3475,If all bullets  hit
-Charged Blaster Cannon,Mage,Post-Golem,13,949,2620,100,2,0,20,20,3,14,14,500000,8,False,2882,Full charge
-Nightglow,Mage,Post-EoL,14,914,914,50,2.5,0,2,36,30,17,23,250000,8,True,4952,
-Sky Dragon's Fury,Melee,Post-Plantera,12,800,3200,140,5,0,30,30,2,24,0,250000,8,True,3858,Proyectiles
-Eventide,Ranger,Post-EoL,14,779,2133,50,2,0,2,30,30,10,0,250000,8,True,4953,
-Phantasm,Ranger,Post-Cultist,15,752,,50,2,0,12,12,5,20,0,500000,10,True,3540,If all arrows hit
-Blizzard Staff,Mage,Post-Plantera,12,750,1200,58,4.5,0,5,10,12,10,9,450000,8,True,1931,
-Tsunami,Ranger,Post-WoF,7,742,,53,2,0,24,24,2.5,10,0,250000,8,True,2624,"If all arrows hit, is post wof because it can be obtained from duke at start of hm"
-Christmas Tree Sword,Melee,Post-Plantera,12,720,1200,86,7,0,23,23,2.61,5,0,500000,8,True,1928,
-Terra Blade,Melee,Post-Plantera,12,700,1400,85,6.5,0,18,18,3.33,12,0,1000000,8,True,757,
-Xenopopper,Ranger,Post-Golem,13,691,,45,3,0,21,21,2.86,12,0,500000,8,True,2797,Does not pierce
-Seedler,Melee,Post-Plantera,12,650,1100,50,6,0,23,23,2.61,12,0,500000,5,True,3018,
-The Eye of Cthulhu,Melee,Post-Plantera,12,650,1000,115,3.5,0,25,25,2.4,16,0,625000,8,False,3292,
-Betsy's Wrath,Mage,Post-Golem,13,635,2224,100,7,0,20,20,3,14,14,250000,8,True,3870,
-Nail Gun,Ranger,Post-Plantera,12,633,1246,85,0,0,15,15,4,10,0,500000,8,True,3107,
-Electrosphere Launcher,Ranger,Post-Golem,13,614,1888,40,2,0,12,12,5,12,0,500000,8,False,2796,
-Jack 'O Lantern Launcher,Ranger,Post-Plantera,12,613,1348,85,5,6,25,25,2.4,7,0,500000,8,True,1784,
-Bat Scepter,Mage,Post-Plantera,12,600,,45,3,0,12,12,5,10,6,500000,8,True,1801,Does not pierce
-Influx Waver,Melee,Post-Plantera,12,600,1300,100,4.5,0,20,20,3,11,0,500000,8,True,2880,Doesn't Pierce
-Kraken,Melee,Post-Plantera,12,600,700,95,4.3,10,25,25,2.4,16,0,550000,8,False,3291,
-Psycho Knife,Melee,Post-Plantera,12,600,2000,85,3.5,0,8,8,7.5,0,0,500000,8,True,3106,
-Stake Launcher,Ranger,Post-Plantera,12,599,1534,75,6.5,10,12,12,5,9,0,500000,8,True,1835,
-Chain Gun,Ranger,Post-Plantera,12,590,,38,1.75,0,4,4,15,14,0,450000,8,True,1929,If all bullets hit
-Stardust Dragon Staff,Summoner,Post-Cultist,15,580,1700,40,2,0,36,36,1.67,10,0,500000,10,True,3531,
-Aerial Bane,Ranger,Post-Plantera,12,564,2732,38,4.5,3,30,30,2,11,0,250000,8,True,3859,If all arrows hit
-Piranha Gun,Ranger,Post-Plantera,12,553,,40,1,0,30,30,2,14,0,1000000,8,False,1156,"Does not pierce, if all piranhas hit"
-Elf Melter,Ranger,Post-Plantera,12,530,1446,57,0.425,0,6,30,10,8.5,0,500000,8,True,1910,
-Vampire Knives,Melee,Post-Plantera,12,520,520,29,2.75,0,16,16,3.75,15,0,1000000,8,True,1569,
-Heat Ray,Mage,Post-Golem,13,512,,90,3,0,10,10,6,15,8,350000,7,True,1295,Does not pierce
-Tactical Shotgun,Ranger,Post-Plantera,12,507,,36,7,0,34,34,1.76,6,0,400000,8,True,679,If all pellets hit
-Fetid Baghnakhs,Melee,Post-WoF,7,500,1500,60,6,0,8,8,7.5,0,0,400000,5,True,3013,
-Flairon,Melee,Post-WoF,7,500,500,132,4.5,0,20,20,3,14,0,250000,8,True,5526,Doesn't Pierce
-Paladin's Hammer,Melee,Post-Plantera,12,500,1200,100,9,0,15,15,4,14,0,500000,8,True,1513,
-Spectre Staff,Mage,Post-Plantera,12,500,520,65,6,0,24,24,2.5,6,15,300000,8,True,1446,
-Valkyrie Yoyo,Melee,Post-Destroyer,9,500,600,70,4.5,0,25,25,2.4,16,0,200000,9,False,3288,
-Venom Staff,Mage,Post-WoF,7,460,1100,44,7,0,30,30,2,14,25,350000,7,True,2188,
-Keybrand,Melee,Post-Plantera,12,450,950,105,6.5,16,20,20,3,15.9,0,200000,8,True,671,
-Razonblade Typhoon,Mage,Post-WoF,7,450,1600,85,5,0,40,40,1.5,6,20,250000,8,True,2622,
-Snowman Cannon,Ranger,Post-Plantera,12,444,1636,67,4,0,15,15,4,15,0,450000,8,True,1946,
-Sniper Rifle,Ranger,Post-Plantera,12,431,1281,200,8,25,36,36,1.67,16,0,400000,8,False,1254,
-Leaf Blower,Mage,Post-Golem,13,428,,48,4,0,7,7,8.57,11,5,300000,7,True,1178,Does not pierce
-Candy Corn Rifle,Ranger,Post-Plantera,12,425,1152,60,2,6,9,9,6.67,10,0,500000,8,True,1782,
-Kaleidoscope,Summoner,Post-EoL,14,420,1200,170,4,0,30,30,2,4,0,250000,8,False,4914,
-Resonance Scepter,Mage,Post-Plantera,12,410,1050,70,5,0,25,25,2.4,10,18,500000,5,True,5065,
-Venus Magnum,Ranger,Post-Plantera,12,406,1096,50,5.5,0,9,9,6.67,13.5,0,250000,7,True,1255,
-Possessed Hatchet,Melee,Post-Golem,13,400,1000,80,5,0,14,14,4.29,12,0,350000,7,True,1122,
-Red's Throw,Melee,Post-Destroyer,9,400,500,70,4.5,0,25,25,2.4,16,0,200000,9,False,3287,
-The Horseman's Blade,Melee,Post-Plantera,12,400,1200,150,7.5,0,26,26,2.31,0,0,500000,8,True,1826,Without projectiles
-Toxic Flask,Mage,Post-Plantera,12,398,984,52,4,0,45,45,1.33,14,30,500000,8,False,3105,
-Rocket Launcher,Ranger,Post-Plantera,12,385,957,55,4,0,30,30,2,5,0,400000,8,True,759,
-Stynger,Ranger,Post-Golem,13,383,1030,45,5,0,22,22,2.73,9,0,350000,7,True,1258,
-Flamethrower,Ranger,Post-SkeletronPrime,11,365,903,35,0.3,0,6,30,10,7,0,500000,5,True,506,
-Super Star Shooter,Ranger,Post-SkeletronPrime,11,363,1140,60,5,0,18,18,3.33,20,0,500000,3,True,4060,
-Dark Harvest,Summoner,Post-Plantera,12,350,950,110,3,0,27,27,2.22,4,0,500000,8,False,4680,
-Death Sickle,Melee,Post-SkeletronPrime,11,350,900,57,5,0,25,25,2.4,9,0,375000,6,True,1327,Only 2 Dummies
-Rainbow Crystal Staff,Summoner,Post-Moonlord,16,350,1000,130,7.5,0,30,30,2,14,0,500000,10,False,3571,
-Tome of Infinite Wisdom,Mage,Post-Destroyer,9,350,,36,9,0,3,25,20,11,20,50000,5,True,3852,
-Magnet Sphere,Mage,Post-SkeletronPrime,11,333,334,48,6,0,20,20,3,1.2,14,500000,8,False,1266,
-Grenade Launcher,Ranger,Post-Plantera,12,330,1055,60,4,0,20,20,3,10,0,350000,8,True,758,
-Meteor Staff,Mage,Post-WoF,7,330,850,50,4.5,0,10,10,6,10,9,100000,5,True,2750,
-Ghastly Glaive,Melee,Post-Destroyer,9,320,1000,45,7,0,27,27,2.22,42,0,50000,5,False,3836,
-Unholy Trident,Mage,Post-WoF,7,315,942,88,6.5,0,17,17,3.53,13,19,500000,6,True,683,
-Onyx Blaster,Ranger,Post-WoF,7,312,456,24,6.5,0,48,48,1.25,7,0,250000,4,False,3788,If all pellets hit
-Anchor,Melee,Post-WoF,7,300,400,70,8,0,20,20,3,20,0,50000,3,False,2424,Only 2 Dummies
-Arkhalis,Melee,Post-Destroyer,9,300,920,25,4,0,15,25,4,15,0,250000,9,False,3368,
-Breaker Blade,Melee,Post-WoF,7,300,800,70,8,0,35,35,1.71,0,0,150000,4,False,426,
-Chlorophyte Saber,Melee,Post-SkeletronPrime,11,300,750,57,4,0,28,16,2.14,8,0,276000,7,True,1227,
+Zenith,Melee,Post-Moonlord,16,4800,13000.0,190,6.5,10,10,30,6.0,16.0,0,1000000,10,True,4956,
+Last Prism,Mage,Post-Moonlord,16,3657,1142.0,100,0.25,0,10,10,6.0,30.0,12,500000,10,False,3541,Fully charged
+Star Wrath,Melee,Post-Moonlord,16,2700,5800.0,170,6.5,0,16,16,3.75,8.0,0,1000000,10,True,3065,
+Terrarian,Melee,Post-Moonlord,16,2200,4600.0,190,6.5,10,25,25,2.4,16.0,0,500000,10,False,3389,
+Meowmere,Melee,Post-Moonlord,16,2100,6400.0,200,6.5,0,14,14,4.29,12.0,0,1000000,10,True,3063,
+Lunar Flare,Mage,Post-Moonlord,16,1974,5543.0,100,4.5,0,10,10,6.0,10.0,9,500000,10,True,3570,
+Celebration Mk.2,Ranger,Post-Moonlord,16,1709,2821.0,50,10.0,0,6,6,10.0,17.0,0,500000,10,True,3930,If all rockets hit
+Solar Eruption,Melee,Post-Cultist,15,1500,4300.0,105,2.0,0,20,20,3.0,24.0,0,500000,10,True,3473,Close to target
+Bubble Gun,Mage,Post-WoF,7,1467,,70,3.0,0,9,9,6.67,15.0,5,250000,8,True,2623,Does not pierce
+Starlight,Melee,Post-EoL,14,1300,4000.0,80,4.0,10,6,18,10.0,15.0,0,250000,8,False,4923,
+S.D.M.G,Ranger,Post-Moonlord,16,1256,,85,2.5,10,5,5,12.0,12.0,0,750000,10,True,1553,Does not pierce
+Nebula Arcanum,Mage,Post-Cultist,15,1254,2183.0,70,5.0,0,30,30,2.0,7.0,30,500000,10,True,3476,
+Laser Machine Gun,Mage,Post-Golem,13,1210,,60,2.0,0,20,20,3.0,20.0,6,500000,8,False,2795,Does not pierce
+Flying Dragon,Melee,Post-Plantera,12,1200,3100.0,180,5.5,0,20,20,3.0,17.0,0,250000,8,True,3827,
+Daybreak,Melee,Post-Cultist,15,1100,,150,5.0,0,16,16,3.75,10.0,0,500000,10,True,3543,Doesn't Pierce
+Nebula Blaze,Mage,Post-Cultist,15,1094,2123.0,130,3.0,0,12,12,5.0,6.0,12,500000,10,True,3542,
+Razor Pine,Mage,Post-Plantera,12,1067,,48,3.25,0,8,8,7.5,12.0,5,450000,8,True,1930,
+Stellar Tune,Mage,Post-EoL,14,1056,3073.0,85,1.5,20,6,12,10.0,1.0,12,500000,5,True,4715,
+Vortex Beater,Ranger,Post-Cultist,15,976,1060.0,50,2.0,0,20,20,3.0,20.0,0,500000,10,True,3475,If all bullets  hit
+Charged Blaster Cannon,Mage,Post-Golem,13,949,2620.0,100,2.0,0,20,20,3.0,14.0,14,500000,8,False,2882,Full charge
+Nightglow,Mage,Post-EoL,14,914,914.0,50,2.5,0,2,36,30.0,17.0,23,250000,8,True,4952,
+Sky Dragon's Fury,Melee,Post-Plantera,12,800,3200.0,140,5.0,0,30,30,2.0,24.0,0,250000,8,True,3858,Proyectiles
+Eventide,Ranger,Post-EoL,14,779,2133.0,50,2.0,0,2,30,30.0,10.0,0,250000,8,True,4953,
+Phantasm,Ranger,Post-Cultist,15,752,,50,2.0,0,12,12,5.0,20.0,0,500000,10,True,3540,If all arrows hit
+Blizzard Staff,Mage,Post-Plantera,12,750,1200.0,58,4.5,0,5,10,12.0,10.0,9,450000,8,True,1931,
+Tsunami,Ranger,Post-WoF,7,742,,53,2.0,0,24,24,2.5,10.0,0,250000,8,True,2624,"If all arrows hit, is post wof because it can be obtained from duke at start of hm"
+Christmas Tree Sword,Melee,Post-Plantera,12,720,1200.0,86,7.0,0,23,23,2.61,5.0,0,500000,8,True,1928,
+Terra Blade,Melee,Post-Plantera,12,700,1400.0,85,6.5,0,18,18,3.33,12.0,0,1000000,8,True,757,
+Xenopopper,Ranger,Post-Golem,13,691,,45,3.0,0,21,21,2.86,12.0,0,500000,8,True,2797,Does not pierce
+Seedler,Melee,Post-Plantera,12,650,1100.0,50,6.0,0,23,23,2.61,12.0,0,500000,5,True,3018,
+The Eye of Cthulhu,Melee,Post-Plantera,12,650,1000.0,115,3.5,0,25,25,2.4,16.0,0,625000,8,False,3292,
+Betsy's Wrath,Mage,Post-Golem,13,635,2224.0,100,7.0,0,20,20,3.0,14.0,14,250000,8,True,3870,
+Nail Gun,Ranger,Post-Plantera,12,633,1246.0,85,0.0,0,15,15,4.0,10.0,0,500000,8,True,3107,
+Electrosphere Launcher,Ranger,Post-Golem,13,614,1888.0,40,2.0,0,12,12,5.0,12.0,0,500000,8,False,2796,
+Jack 'O Lantern Launcher,Ranger,Post-Plantera,12,613,1348.0,85,5.0,6,25,25,2.4,7.0,0,500000,8,True,1784,
+Bat Scepter,Mage,Post-Plantera,12,600,,45,3.0,0,12,12,5.0,10.0,6,500000,8,True,1801,Does not pierce
+Influx Waver,Melee,Post-Plantera,12,600,1300.0,100,4.5,0,20,20,3.0,11.0,0,500000,8,True,2880,Doesn't Pierce
+Kraken,Melee,Post-Plantera,12,600,700.0,95,4.3,10,25,25,2.4,16.0,0,550000,8,False,3291,
+Psycho Knife,Melee,Post-Plantera,12,600,2000.0,85,3.5,0,8,8,7.5,0.0,0,500000,8,True,3106,
+Stake Launcher,Ranger,Post-Plantera,12,599,1534.0,75,6.5,10,12,12,5.0,9.0,0,500000,8,True,1835,
+Chain Gun,Ranger,Post-Plantera,12,590,,38,1.75,0,4,4,15.0,14.0,0,450000,8,True,1929,If all bullets hit
+Stardust Dragon Staff,Summoner,Post-Cultist,15,580,1700.0,40,2.0,0,36,36,1.67,10.0,0,500000,10,True,3531,
+Aerial Bane,Ranger,Post-Plantera,12,564,2732.0,38,4.5,3,30,30,2.0,11.0,0,250000,8,True,3859,If all arrows hit
+Piranha Gun,Ranger,Post-Plantera,12,553,,40,1.0,0,30,30,2.0,14.0,0,1000000,8,False,1156,"Does not pierce, if all piranhas hit"
+Elf Melter,Ranger,Post-Plantera,12,530,1446.0,57,0.425,0,6,30,10.0,8.5,0,500000,8,True,1910,
+Vampire Knives,Melee,Post-Plantera,12,520,520.0,29,2.75,0,16,16,3.75,15.0,0,1000000,8,True,1569,
+Heat Ray,Mage,Post-Golem,13,512,,90,3.0,0,10,10,6.0,15.0,8,350000,7,True,1295,Does not pierce
+Tactical Shotgun,Ranger,Post-Plantera,12,507,,36,7.0,0,34,34,1.76,6.0,0,400000,8,True,679,If all pellets hit
+Fetid Baghnakhs,Melee,Post-WoF,7,500,1500.0,60,6.0,0,8,8,7.5,0.0,0,400000,5,True,3013,
+Flairon,Melee,Post-WoF,7,500,500.0,132,4.5,0,20,20,3.0,14.0,0,250000,8,True,5526,Doesn't Pierce
+Paladin's Hammer,Melee,Post-Plantera,12,500,1200.0,100,9.0,0,15,15,4.0,14.0,0,500000,8,True,1513,
+Spectre Staff,Mage,Post-Plantera,12,500,520.0,65,6.0,0,24,24,2.5,6.0,15,300000,8,True,1446,
+Valkyrie Yoyo,Melee,Post-Destroyer,9,500,600.0,70,4.5,0,25,25,2.4,16.0,0,200000,9,False,3288,
+Venom Staff,Mage,Post-WoF,7,460,1100.0,44,7.0,0,30,30,2.0,14.0,25,350000,7,True,2188,
+Keybrand,Melee,Post-Plantera,12,450,950.0,105,6.5,16,20,20,3.0,15.9,0,200000,8,True,671,
+Razonblade Typhoon,Mage,Post-WoF,7,450,1600.0,85,5.0,0,40,40,1.5,6.0,20,250000,8,True,2622,
+Snowman Cannon,Ranger,Post-Plantera,12,444,1636.0,67,4.0,0,15,15,4.0,15.0,0,450000,8,True,1946,
+Sniper Rifle,Ranger,Post-Plantera,12,431,1281.0,200,8.0,25,36,36,1.67,16.0,0,400000,8,False,1254,
+Leaf Blower,Mage,Post-Golem,13,428,,48,4.0,0,7,7,8.57,11.0,5,300000,7,True,1178,Does not pierce
+Candy Corn Rifle,Ranger,Post-Plantera,12,425,1152.0,60,2.0,6,9,9,6.67,10.0,0,500000,8,True,1782,
+Kaleidoscope,Summoner,Post-EoL,14,420,1200.0,170,4.0,0,30,30,2.0,4.0,0,250000,8,False,4914,
+Resonance Scepter,Mage,Post-Plantera,12,410,1050.0,70,5.0,0,25,25,2.4,10.0,18,500000,5,True,5065,
+Venus Magnum,Ranger,Post-Plantera,12,406,1096.0,50,5.5,0,9,9,6.67,13.5,0,250000,7,True,1255,
+Possessed Hatchet,Melee,Post-Golem,13,400,1000.0,80,5.0,0,14,14,4.29,12.0,0,350000,7,True,1122,
+Red's Throw,Melee,Post-Destroyer,9,400,500.0,70,4.5,0,25,25,2.4,16.0,0,200000,9,False,3287,
+The Horseman's Blade,Melee,Post-Plantera,12,400,1200.0,150,7.5,0,26,26,2.31,0.0,0,500000,8,True,1826,Without projectiles
+Toxic Flask,Mage,Post-Plantera,12,398,984.0,52,4.0,0,45,45,1.33,14.0,30,500000,8,False,3105,
+Rocket Launcher,Ranger,Post-Plantera,12,385,957.0,55,4.0,0,30,30,2.0,5.0,0,400000,8,True,759,
+Stynger,Ranger,Post-Golem,13,383,1030.0,45,5.0,0,22,22,2.73,9.0,0,350000,7,True,1258,
+Flamethrower,Ranger,Post-SkeletronPrime,11,365,903.0,35,0.3,0,6,30,10.0,7.0,0,500000,5,True,506,
+Super Star Shooter,Ranger,Post-SkeletronPrime,11,363,1140.0,60,5.0,0,18,18,3.33,20.0,0,500000,3,True,4060,
+Dark Harvest,Summoner,Post-Plantera,12,350,950.0,110,3.0,0,27,27,2.22,4.0,0,500000,8,False,4680,
+Death Sickle,Melee,Post-SkeletronPrime,11,350,900.0,57,5.0,0,25,25,2.4,9.0,0,375000,6,True,1327,Only 2 Dummies
+Rainbow Crystal Staff,Summoner,Post-Moonlord,16,350,1000.0,130,7.5,0,30,30,2.0,14.0,0,500000,10,False,3571,
+Tome of Infinite Wisdom,Mage,Post-Destroyer,9,350,,36,9.0,0,3,25,20.0,11.0,20,50000,5,True,3852,
+Magnet Sphere,Mage,Post-SkeletronPrime,11,333,334.0,48,6.0,0,20,20,3.0,1.2,14,500000,8,False,1266,
+Grenade Launcher,Ranger,Post-Plantera,12,330,1055.0,60,4.0,0,20,20,3.0,10.0,0,350000,8,True,758,
+Meteor Staff,Mage,Post-WoF,7,330,850.0,50,4.5,0,10,10,6.0,10.0,9,100000,5,True,2750,
+Ghastly Glaive,Melee,Post-Destroyer,9,320,1000.0,45,7.0,0,27,27,2.22,42.0,0,50000,5,False,3836,
+Unholy Trident,Mage,Post-WoF,7,315,942.0,88,6.5,0,17,17,3.53,13.0,19,500000,6,True,683,
+Onyx Blaster,Ranger,Post-WoF,7,312,456.0,24,6.5,0,48,48,1.25,7.0,0,250000,4,False,3788,If all pellets hit
+Anchor,Melee,Post-WoF,7,300,400.0,70,8.0,0,20,20,3.0,20.0,0,50000,3,False,2424,Only 2 Dummies
+Arkhalis,Melee,Post-Destroyer,9,300,920.0,25,4.0,0,15,25,4.0,15.0,0,250000,9,False,3368,
+Breaker Blade,Melee,Post-WoF,7,300,800.0,70,8.0,0,35,35,1.71,0.0,0,150000,4,False,426,
+Chlorophyte Saber,Melee,Post-SkeletronPrime,11,300,750.0,57,4.0,0,28,16,2.14,8.0,0,276000,7,True,1227,
 Chlorophyte Shotbow,Ranger,Post-SkeletronPrime,11,300,,34,2.75,0,19,19,3.16,11.5,0,240000,7,True,1229,"Does not pierce, if all arrows hit"
-Cholrophyte Claymore,Melee,Post-SkeletronPrime,11,300,1000,95,6,0,60,26,1,8,0,276000,7,False,1226,
-Code 2,Melee,Post-Destroyer,9,300,500,54,3.8,0,25,25,2.4,16,0,250000,5,False,3284,
-Drippler Crippler,Melee,Post-WoF,7,300,800,110,6.5,0,40,40,1.5,15.9,0,200000,4,False,4272,Only 2 Dummies
-Flower Pow,Melee,Post-Plantera,12,300,1100,130,6.5,0,40,40,1.5,15.9,0,300000,7,False,1259,
-Golem Fist,Melee,Post-Golem,13,300,1000,90,12,0,24,24,2.5,14,0,350000,7,True,1297,Doesn't Pierce
-Gungnir,Melee,Post-Destroyer,9,300,900,61,6.4,0,22,22,2.73,5.6,0,230000,5,False,550,
-Light Disc,Melee,Post-Destroyer,9,300,750,60,8,0,14,14,4.29,16,0,750000,5,True,561,
-Morning Star,Summoner,Post-Plantera,12,300,850,160,11,0,35,35,1.71,4,0,300000,8,False,4679,
-North Pole,Melee,Post-Plantera,12,300,750,80,6.7,0,30,30,2,4.75,0,450000,7,False,1947,
-Sleepy Octopod,Melee,Post-Destroyer,9,300,1000,50,7,0,30,30,2,24,0,50000,5,True,3835,
-True Night's Edge,Melee,Post-SkeletronPrime,11,300,450,70,4.75,0,32,32,1.88,14,0,500000,8,True,675,
-Yelets,Melee,Post-Destroyer,9,300,400,60,3.1,0,25,25,2.4,16,0,250000,7,False,3286,
-Megashark,Ranger,Post-Destroyer,9,292,,25,1,0,7,7,8.57,10,0,350000,5,True,533,
-Wasp Gun,Mage,Post-Plantera,12,286,769,31,0.25,0,18,18,3.33,9,10,500000,8,True,1155,
-Pulse Bow,Ranger,Post-SkeletronPrime,11,282,771,80,3,7,20,20,3,7.75,0,450000,8,True,2223,
-Spirit Flame,Mage,Post-WoF,7,281,323,85,5,0,22,22,2.73,3,14,50000,4,True,3779,
-Celebration,Ranger,Post-Golem,13,280,842,25,4,0,30,30,2,15,0,800000,8,True,3546,If all rockets hit
-Crystal Storm,Mage,Post-WoF,7,280,,35,5,0,7,7,8.57,16,5,200000,4,True,518,Does not pierce
-Sky Fracture,Mage,Post-WoF,7,280,330,38,6,20,4,12,15,8.75,17,300000,4,True,3787,
-Staff of Earth,Mage,Post-Golem,13,280,840,125,7.5,20,24,24,2.5,12,18,350000,7,False,1296,
-Star Cannon,Ranger,Post-Brain/Worm,3,280,786,55,3,0,12,12,5,14,0,500000,2,True,197,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
-Toxikarp,Ranger,Post-WoF,7,272,,43,3,0,10,10,6,8.5,0,200000,5,True,3210,Does not pierce
-Rainbow Gun,Mage,Post-Plantera,12,271,824,45,2.5,0,40,40,1.5,16,20,1000000,8,False,1260,
-Brand of the Inferno,Melee,Post-Plantera,12,270,900,95,6.5,0,20,20,3,0,0,50000,5,True,3823,
-Clinger Staff,Mage,Post-WoF,7,270,520,43,8,0,24,24,2.5,15,40,400000,5,True,3014,
-Shadowbeam Staff,Mage,Post-Plantera,12,270,750,80,3.25,0,15,15,4,6,7,300000,8,True,1444,
-Waffle's Iron,Melee,Post-SkeletronPrime,11,270,550,50,4.75,0,23,23,2.61,11,0,150000,5,True,5382,
-Uzi,Ranger,Post-WoF,7,260,630,30,3.5,0,9,9,6.67,13,0,350000,7,True,1265,
-Magical Harp,Mage,Post-Twins,10,254,712,42,2,0,12,12,5,4.5,5,200000,5,True,494,
-Poison Staff,Mage,Post-WoF,7,254,732,43,5.6,0,36,36,1.67,13.5,22,200000,6,True,1308,
-Bananarang,Melee,Post-WoF,7,250,750,45,6.5,0,11,11,5.45,16,0,600000,5,True,1324,
-Chain Guillotines,Melee,Post-WoF,7,250,500,59,3.25,0,14,14,4.29,9,0,400000,5,True,3012,Only 2 Dummies
-Gatlingator,Ranger,Post-WoF,7,250,,21,1.5,0,7,7,8.57,8,0,350000,4,True,2270,Bought from the travelling in hm
-Ice Sickle,Melee,Post-WoF,7,250,450,50,5.5,0,25,25,2.4,12,0,250000,5,False,1306,Only Pierces 2 Dummies
-Mushroom Spear,Melee,Post-Destroyer,9,250,750,60,6.2,0,40,40,1.5,5.5,0,700000,7,False,756,
-Nettle Burst,Mage,Post-Plantera,12,250,670,35,1,0,25,25,2.4,32,12,200000,7,True,788,
-Obsidian Swordfish,Melee,Post-WoF,7,250,1100,70,6.5,20,20,20,3,4,0,50000,7,False,2331,
-True Excalibur,Melee,Post-Plantera,12,250,800,72,4.5,0,18,18,3.33,11,0,500000,8,True,674,
-Phantom Phoenix,Ranger,Post-Destroyer,9,242,370,32,2,0,18,18,3.33,20,0,50000,5,True,3854,
-Adamantite Glaive,Melee,Post-WoF,7,240,500,49,6,0,25,25,2.4,5,0,90000,4,False,406,
-Chlorophyte Partisan,Melee,Post-SkeletronPrime,11,240,800,49,6.2,0,23,23,2.61,5,0,180000,7,False,1228,
-Quad-Barrel Shotgun,Ranger,Post-Skeletron,6,240,,14,6.5,0,55,55,1.09,7,0,350000,3,False,4703,Does not pierce
-Titanium Trident,Melee,Post-WoF,7,240,540,48,6.2,0,23,23,2.61,5,0,105000,4,False,1200,
-Nimbus Rod,Mage,Post-WoF,7,237,342,30,0,0,22,22,2.73,16,30,175000,6,False,1244,Can hit 2 dummies
-Magic Dagger,Mage,Post-WoF,7,223,621,30,3.75,0,8,8,7.5,12,6,250000,4,True,517,Pierces 2 dummies
-Chik,Melee,Post-WoF,7,220,270,39,3.3,0,25,25,2.4,16,0,200000,4,False,3283,
-Cursed Flame,Mage,Post-WoF,7,220,443,55,6.5,0,15,15,4,10,9,200000,4,True,519,Pierces 2 dummies
-Cutlass,Melee,Post-WoF,7,220,600,53,4,0,16,16,3.75,0,0,180000,4,True,672,
-Dao of Pow,Melee,Post-WoF,7,220,850,100,6,0,45,45,1.33,15,0,144000,5,False,389,
-Demon Scythe,Mage,Pre-Boss,1,220,400,35,5,0,20,20,3,0.2,14,75000,3,False,272,
-Frostbrand,Melee,Post-WoF,7,220,540,49,4.5,0,30,23,2,12,0,250000,5,True,676,
-Mythril Halberd,Melee,Post-WoF,7,220,450,45,5,0,26,26,2.31,4.5,0,67500,4,False,390,
-Orichalcum Halber,Melee,Post-WoF,7,220,580,46,5.5,0,25,25,2.4,4.5,0,82500,4,False,1193,
-Inferno Fork,Mage,Post-Plantera,12,218,923,70,5,0,30,30,2,8,18,300000,8,False,1445,
-Book of skulls,Mage,Post-Skeletron,6,210,230,29,3.5,0,26,26,2.31,3.5,18,75000,2,True,1313,
-Orange Zapinator,Mage,Post-WoF,7,210,608,100,6,0,36,36,1.67,15,16,500000,5,False,4348,Difficult to read due to nature
-Palladium Pike,Melee,Post-WoF,7,210,530,44,4.5,0,27,27,2.22,4.4,0,60000,4,False,1186,
-Shadowflame Knife,Melee,Post-WoF,7,210,350,43,5.75,3,12,12,5,13,0,100000,5,True,3054,
-Terragrim,Melee,Pre-Boss,1,210,620,17,3,0,15,25,4,15,0,250000,2,False,4144,
-Ice Rod,Mage,Post-WoF,7,206,,28,2,0,9,9,6.67,12,6,500000,4,True,496,Does not pierce
-Ice Bow,Ranger,Post-WoF,7,203,,39,4.5,0,14,14,4.29,10,0,250000,5,True,725,
-Shotgun,Ranger,Post-WoF,7,203,203,24,6.5,0,45,45,1.33,7,0,250000,4,False,534,If all pellets hit
-Shadowflame Bow,Ranger,Post-WoF,7,202,526,47,4.5,3,20,20,3,11,0,100000,5,True,3052,Inflicts shadowflame
-Hallowed Reapeter,Ranger,Post-Destroyer,9,201,,50,2.5,0,17,17,3.53,11,0,200000,4,True,578,Does not pierce
-Adamantite Sword,Melee,Post-WoF,7,200,550,61,6,0,21,21,2.86,0,0,138000,4,True,482,
-Amarok,Melee,Post-WoF,7,200,230,43,2.8,0,25,25,2.4,16,0,200000,4,False,3289,Only 2 Dummies
-Beam Sword,Melee,Post-WoF,7,200,550,52,6.5,0,35,20,1.71,11,0,150000,4,True,723,Doesn't Pierce
-Clockwork Assault Rifle,Ranger,Post-WoF,7,200,,17,0,0,4,12,15,7.75,0,150000,4,True,434,Does not pierce
-Excalibur,Melee,Post-Destroyer,9,200,700,72,4.5,0,20,20,3,0,0,230000,5,True,368,
-Format:C,Melee,Post-WoF,7,200,250,39,3.25,0,25,25,2.4,16,0,200000,3,False,3315,
-Frost Staff,Mage,Post-WoF,7,200,380,46,5,0,12,12,5,16,12,200000,5,True,726,
-Gradient,Melee,Post-WoF,7,200,200,49,3.8,0,25,25,2.4,16,0,200000,3,False,3316,
-Hel-Fire,Melee,Post-WoF,7,200,250,39,4.5,0,25,25,2.4,16,0,200000,4,False,3290,Only 2 Dummies
-KO Cannon,Melee,Post-WoF,7,200,420,40,6.5,0,28,28,2.14,15,0,175000,4,True,1314,Only 2 Dummies
-Scourge of the Corruptor,Melee,Post-Plantera,12,200,220,70,5,0,20,20,3,14,0,1000000,8,True,1571,Doesn't Pierce
-Slap Hand,Melee,Post-WoF,7,200,500,55,20,15,20,20,3,0,0,250000,4,True,3258,
-Marrow,Ranger,Post-WoF,7,197,,53,4.7,5,19,19,3.16,11,0,27000,5,True,682,Does not pierce
-Dark Lance,Melee,Post-Skeletron,6,190,400,34,5,0,22,22,2.73,6,0,125000,3,False,274,
-Life Drain,Mage,Post-WoF,7,190,560,35,2.5,0,12,12,5,10,10,400000,5,True,3006,Does not pierce
-Rainbow Rod,Mage,Post-Twins,10,190,400,50,6,0,25,25,2.4,6,21,200000,5,False,495,
-Shadowflame Hex Doll,Mage,Post-WoF,7,182,572,32,3.75,3,7,21,8.57,9,6,100000,5,True,3053,
-Bladetongue,Melee,Post-WoF,7,180,550,55,5.75,0,28,28,2.14,0,0,200000,5,True,3211,Spits Ichor
-Cobalt Naginata,Melee,Post-WoF,7,180,400,44,4,0,28,28,2.14,4.3,0,45000,4,False,537,
-Flower of Frost,Mage,Post-WoF,7,180,,60,6.5,0,12,12,5,9,11,250000,5,False,1264,Does not pierce
-Ham Bat,Melee,Post-WoF,7,180,530,57,6.5,0,20,20,3,0,0,50000,4,True,5096,
-Orichalcum Sword,Melee,Post-WoF,7,180,450,59,6,0,22,22,2.73,0,0,126500,4,True,1192,
-Phasesaber,Melee,Post-WoF,7,180,570,50,3,0,16,16,3.75,14,0,50000,4,True,3765,
+Cholrophyte Claymore,Melee,Post-SkeletronPrime,11,300,1000.0,95,6.0,0,60,26,1.0,8.0,0,276000,7,False,1226,
+Code 2,Melee,Post-Destroyer,9,300,500.0,54,3.8,0,25,25,2.4,16.0,0,250000,5,False,3284,
+Drippler Crippler,Melee,Post-WoF,7,300,800.0,110,6.5,0,40,40,1.5,15.9,0,200000,4,False,4272,Only 2 Dummies
+Flower Pow,Melee,Post-Plantera,12,300,1100.0,130,6.5,0,40,40,1.5,15.9,0,300000,7,False,1259,
+Golem Fist,Melee,Post-Golem,13,300,1000.0,90,12.0,0,24,24,2.5,14.0,0,350000,7,True,1297,Doesn't Pierce
+Gungnir,Melee,Post-Destroyer,9,300,900.0,61,6.4,0,22,22,2.73,5.6,0,230000,5,False,550,
+Light Disc,Melee,Post-Destroyer,9,300,750.0,60,8.0,0,14,14,4.29,16.0,0,750000,5,True,561,
+Morning Star,Summoner,Post-Plantera,12,300,850.0,160,11.0,0,35,35,1.71,4.0,0,300000,8,False,4679,
+North Pole,Melee,Post-Plantera,12,300,750.0,80,6.7,0,30,30,2.0,4.75,0,450000,7,False,1947,
+Sleepy Octopod,Melee,Post-Destroyer,9,300,1000.0,50,7.0,0,30,30,2.0,24.0,0,50000,5,True,3835,
+True Night's Edge,Melee,Post-SkeletronPrime,11,300,450.0,70,4.75,0,32,32,1.88,14.0,0,500000,8,True,675,
+Yelets,Melee,Post-Destroyer,9,300,400.0,60,3.1,0,25,25,2.4,16.0,0,250000,7,False,3286,
+Megashark,Ranger,Post-Destroyer,9,292,,25,1.0,0,7,7,8.57,10.0,0,350000,5,True,533,
+Wasp Gun,Mage,Post-Plantera,12,286,769.0,31,0.25,0,18,18,3.33,9.0,10,500000,8,True,1155,
+Pulse Bow,Ranger,Post-SkeletronPrime,11,282,771.0,80,3.0,7,20,20,3.0,7.75,0,450000,8,True,2223,
+Spirit Flame,Mage,Post-WoF,7,281,323.0,85,5.0,0,22,22,2.73,3.0,14,50000,4,True,3779,
+Celebration,Ranger,Post-Golem,13,280,842.0,25,4.0,0,30,30,2.0,15.0,0,800000,8,True,3546,If all rockets hit
+Crystal Storm,Mage,Post-WoF,7,280,,35,5.0,0,7,7,8.57,16.0,5,200000,4,True,518,Does not pierce
+Sky Fracture,Mage,Post-WoF,7,280,330.0,38,6.0,20,4,12,15.0,8.75,17,300000,4,True,3787,
+Staff of Earth,Mage,Post-Golem,13,280,840.0,125,7.5,20,24,24,2.5,12.0,18,350000,7,False,1296,
+Star Cannon,Ranger,Post-Brain/Worm,3,280,786.0,55,3.0,0,12,12,5.0,14.0,0,500000,2,True,197,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
+Toxikarp,Ranger,Post-WoF,7,272,,43,3.0,0,10,10,6.0,8.5,0,200000,5,True,3210,Does not pierce
+Rainbow Gun,Mage,Post-Plantera,12,271,824.0,45,2.5,0,40,40,1.5,16.0,20,1000000,8,False,1260,
+Brand of the Inferno,Melee,Post-Plantera,12,270,900.0,95,6.5,0,20,20,3.0,0.0,0,50000,5,True,3823,
+Clinger Staff,Mage,Post-WoF,7,270,520.0,43,8.0,0,24,24,2.5,15.0,40,400000,5,True,3014,
+Shadowbeam Staff,Mage,Post-Plantera,12,270,750.0,80,3.25,0,15,15,4.0,6.0,7,300000,8,True,1444,
+Waffle's Iron,Melee,Post-SkeletronPrime,11,270,550.0,50,4.75,0,23,23,2.61,11.0,0,150000,5,True,5382,
+Uzi,Ranger,Post-WoF,7,260,630.0,30,3.5,0,9,9,6.67,13.0,0,350000,7,True,1265,
+Magical Harp,Mage,Post-Twins,10,254,712.0,42,2.0,0,12,12,5.0,4.5,5,200000,5,True,494,
+Poison Staff,Mage,Post-WoF,7,254,732.0,43,5.6,0,36,36,1.67,13.5,22,200000,6,True,1308,
+Bananarang,Melee,Post-WoF,7,250,750.0,45,6.5,0,11,11,5.45,16.0,0,600000,5,True,1324,
+Chain Guillotines,Melee,Post-WoF,7,250,500.0,59,3.25,0,14,14,4.29,9.0,0,400000,5,True,3012,Only 2 Dummies
+Gatlingator,Ranger,Post-WoF,7,250,,21,1.5,0,7,7,8.57,8.0,0,350000,4,True,2270,Bought from the travelling in hm
+Ice Sickle,Melee,Post-WoF,7,250,450.0,50,5.5,0,25,25,2.4,12.0,0,250000,5,False,1306,Only Pierces 2 Dummies
+Mushroom Spear,Melee,Post-Destroyer,9,250,750.0,60,6.2,0,40,40,1.5,5.5,0,700000,7,False,756,
+Nettle Burst,Mage,Post-Plantera,12,250,670.0,35,1.0,0,25,25,2.4,32.0,12,200000,7,True,788,
+Obsidian Swordfish,Melee,Post-WoF,7,250,1100.0,70,6.5,20,20,20,3.0,4.0,0,50000,7,False,2331,
+True Excalibur,Melee,Post-Plantera,12,250,800.0,72,4.5,0,18,18,3.33,11.0,0,500000,8,True,674,
+Phantom Phoenix,Ranger,Post-Destroyer,9,242,370.0,32,2.0,0,18,18,3.33,20.0,0,50000,5,True,3854,
+Adamantite Glaive,Melee,Post-WoF,7,240,500.0,49,6.0,0,25,25,2.4,5.0,0,90000,4,False,406,
+Chlorophyte Partisan,Melee,Post-SkeletronPrime,11,240,800.0,49,6.2,0,23,23,2.61,5.0,0,180000,7,False,1228,
+Quad-Barrel Shotgun,Ranger,Post-Skeletron,6,240,,14,6.5,0,55,55,1.09,7.0,0,350000,3,False,4703,Does not pierce
+Titanium Trident,Melee,Post-WoF,7,240,540.0,48,6.2,0,23,23,2.61,5.0,0,105000,4,False,1200,
+Nimbus Rod,Mage,Post-WoF,7,237,342.0,30,0.0,0,22,22,2.73,16.0,30,175000,6,False,1244,Can hit 2 dummies
+Magic Dagger,Mage,Post-WoF,7,223,621.0,30,3.75,0,8,8,7.5,12.0,6,250000,4,True,517,Pierces 2 dummies
+Chik,Melee,Post-WoF,7,220,270.0,39,3.3,0,25,25,2.4,16.0,0,200000,4,False,3283,
+Cursed Flame,Mage,Post-WoF,7,220,443.0,55,6.5,0,15,15,4.0,10.0,9,200000,4,True,519,Pierces 2 dummies
+Cutlass,Melee,Post-WoF,7,220,600.0,53,4.0,0,16,16,3.75,0.0,0,180000,4,True,672,
+Dao of Pow,Melee,Post-WoF,7,220,850.0,100,6.0,0,45,45,1.33,15.0,0,144000,5,False,389,
+Demon Scythe,Mage,Pre-Boss,1,220,400.0,35,5.0,0,20,20,3.0,0.2,14,75000,3,False,272,
+Frostbrand,Melee,Post-WoF,7,220,540.0,49,4.5,0,30,23,2.0,12.0,0,250000,5,True,676,
+Mythril Halberd,Melee,Post-WoF,7,220,450.0,45,5.0,0,26,26,2.31,4.5,0,67500,4,False,390,
+Orichalcum Halber,Melee,Post-WoF,7,220,580.0,46,5.5,0,25,25,2.4,4.5,0,82500,4,False,1193,
+Inferno Fork,Mage,Post-Plantera,12,218,923.0,70,5.0,0,30,30,2.0,8.0,18,300000,8,False,1445,
+Book of skulls,Mage,Post-Skeletron,6,210,230.0,29,3.5,0,26,26,2.31,3.5,18,75000,2,True,1313,
+Orange Zapinator,Mage,Post-WoF,7,210,608.0,100,6.0,0,36,36,1.67,15.0,16,500000,5,False,4348,Difficult to read due to nature
+Palladium Pike,Melee,Post-WoF,7,210,530.0,44,4.5,0,27,27,2.22,4.4,0,60000,4,False,1186,
+Shadowflame Knife,Melee,Post-WoF,7,210,350.0,43,5.75,3,12,12,5.0,13.0,0,100000,5,True,3054,
+Terragrim,Melee,Pre-Boss,1,210,620.0,17,3.0,0,15,25,4.0,15.0,0,250000,2,False,4144,
+Ice Rod,Mage,Post-WoF,7,206,,28,2.0,0,9,9,6.67,12.0,6,500000,4,True,496,Does not pierce
+Ice Bow,Ranger,Post-WoF,7,203,,39,4.5,0,14,14,4.29,10.0,0,250000,5,True,725,
+Shotgun,Ranger,Post-WoF,7,203,203.0,24,6.5,0,45,45,1.33,7.0,0,250000,4,False,534,If all pellets hit
+Shadowflame Bow,Ranger,Post-WoF,7,202,526.0,47,4.5,3,20,20,3.0,11.0,0,100000,5,True,3052,Inflicts shadowflame
+Hallowed Reapeter,Ranger,Post-Destroyer,9,201,,50,2.5,0,17,17,3.53,11.0,0,200000,4,True,578,Does not pierce
+Adamantite Sword,Melee,Post-WoF,7,200,550.0,61,6.0,0,21,21,2.86,0.0,0,138000,4,True,482,
+Amarok,Melee,Post-WoF,7,200,230.0,43,2.8,0,25,25,2.4,16.0,0,200000,4,False,3289,Only 2 Dummies
+Beam Sword,Melee,Post-WoF,7,200,550.0,52,6.5,0,35,20,1.71,11.0,0,150000,4,True,723,Doesn't Pierce
+Clockwork Assault Rifle,Ranger,Post-WoF,7,200,,17,0.0,0,4,12,15.0,7.75,0,150000,4,True,434,Does not pierce
+Excalibur,Melee,Post-Destroyer,9,200,700.0,72,4.5,0,20,20,3.0,0.0,0,230000,5,True,368,
+Format:C,Melee,Post-WoF,7,200,250.0,39,3.25,0,25,25,2.4,16.0,0,200000,3,False,3315,
+Frost Staff,Mage,Post-WoF,7,200,380.0,46,5.0,0,12,12,5.0,16.0,12,200000,5,True,726,
+Gradient,Melee,Post-WoF,7,200,200.0,49,3.8,0,25,25,2.4,16.0,0,200000,3,False,3316,
+Hel-Fire,Melee,Post-WoF,7,200,250.0,39,4.5,0,25,25,2.4,16.0,0,200000,4,False,3290,Only 2 Dummies
+KO Cannon,Melee,Post-WoF,7,200,420.0,40,6.5,0,28,28,2.14,15.0,0,175000,4,True,1314,Only 2 Dummies
+Scourge of the Corruptor,Melee,Post-Plantera,12,200,220.0,70,5.0,0,20,20,3.0,14.0,0,1000000,8,True,1571,Doesn't Pierce
+Slap Hand,Melee,Post-WoF,7,200,500.0,55,20.0,15,20,20,3.0,0.0,0,250000,4,True,3258,
+Marrow,Ranger,Post-WoF,7,197,,53,4.7,5,19,19,3.16,11.0,0,27000,5,True,682,Does not pierce
+Dark Lance,Melee,Post-Skeletron,6,190,400.0,34,5.0,0,22,22,2.73,6.0,0,125000,3,False,274,
+Life Drain,Mage,Post-WoF,7,190,560.0,35,2.5,0,12,12,5.0,10.0,10,400000,5,True,3006,Does not pierce
+Rainbow Rod,Mage,Post-Twins,10,190,400.0,50,6.0,0,25,25,2.4,6.0,21,200000,5,False,495,
+Shadowflame Hex Doll,Mage,Post-WoF,7,182,572.0,32,3.75,3,7,21,8.57,9.0,6,100000,5,True,3053,
+Bladetongue,Melee,Post-WoF,7,180,550.0,55,5.75,0,28,28,2.14,0.0,0,200000,5,True,3211,Spits Ichor
+Cobalt Naginata,Melee,Post-WoF,7,180,400.0,44,4.0,0,28,28,2.14,4.3,0,45000,4,False,537,
+Flower of Frost,Mage,Post-WoF,7,180,,60,6.5,0,12,12,5.0,9.0,11,250000,5,False,1264,Does not pierce
+Ham Bat,Melee,Post-WoF,7,180,530.0,57,6.5,0,20,20,3.0,0.0,0,50000,4,True,5096,
+Orichalcum Sword,Melee,Post-WoF,7,180,450.0,59,6.0,0,22,22,2.73,0.0,0,126500,4,True,1192,
+Phasesaber,Melee,Post-WoF,7,180,570.0,50,3.0,0,16,16,3.75,14.0,0,50000,4,True,3765,
 Titanium Repeater,Ranger,Post-WoF,7,172,,43,2.5,0,17,17,3.53,10.5,0,140000,4,True,1201,Does not pierce
-Durendal,Summoner,Post-Destroyer,9,170,450,55,2,0,28,28,2.14,4,0,230000,5,False,4678,
-Lunar Portal Staff,Summoner,Post-Moonlord,16,170,600,100,7.5,0,30,30,2,14,0,500000,10,False,3569,
-Blood Thorn,Mage,Pre-Boss,1,165,302,34,1,0,11,33,5.45,32,20,200000,4,True,4270,
-Medusa Head,Mage,Post-WoF,7,164,492,40,2,0,20,20,3,1,15,200000,4,True,3269,Short Range
-Adamantite Repeater,Ranger,Post-WoF,7,163,,42,2.5,0,18,18,3.33,10,0,120000,4,True,481,Does not pierce
-Phoenix Blaster,Ranger,Post-Skeletron,6,162,,30,2,0,14,14,4.29,13,0,175000,3,False,219,Does not pierce
-Crystal Vile Shard,Mage,Post-WoF,7,161,481,25,3,0,33,33,1.82,32,13,400000,5,True,3051,
-Ballista Staff,Summoner,Post-Golem,13,160,420,156,4.7,0,30,30,2,1,0,750000,8,False,3826,
-Mythril Sword,Melee,Post-WoF,7,160,450,50,6,0,20,20,3,0,0,103500,4,True,484,
-Sunfury,Melee,Post-Skeletron,6,160,450,64,6.75,7,45,45,1.33,12,0,125000,3,False,220,
-Proximity Mine Launcher,Ranger,Post-Plantera,12,152,664,80,4,0,50,50,1.2,12,0,350000,8,True,760,
-Orichalcum Repeater,Ranger,Post-WoF,7,151,,40,2,0,19,19,3.16,9.75,0,110000,4,True,1194,Does not pierce
-Cool Whip,Summoner,Post-WoF,7,150,350,45,1.5,0,30,30,2,4,0,200000,4,False,4911,
-Desert Tiger Staff,Summoner,Post-Plantera,12,150,340,41,4,0,36,36,1.67,10,0,1000000,8,True,4607,
+Durendal,Summoner,Post-Destroyer,9,170,450.0,55,2.0,0,28,28,2.14,4.0,0,230000,5,False,4678,
+Lunar Portal Staff,Summoner,Post-Moonlord,16,170,600.0,100,7.5,0,30,30,2.0,14.0,0,500000,10,False,3569,
+Blood Thorn,Mage,Pre-Boss,1,165,302.0,34,1.0,0,11,33,5.45,32.0,20,200000,4,True,4270,
+Medusa Head,Mage,Post-WoF,7,164,492.0,40,2.0,0,20,20,3.0,1.0,15,200000,4,True,3269,Short Range
+Adamantite Repeater,Ranger,Post-WoF,7,163,,42,2.5,0,18,18,3.33,10.0,0,120000,4,True,481,Does not pierce
+Phoenix Blaster,Ranger,Post-Skeletron,6,162,,30,2.0,0,14,14,4.29,13.0,0,175000,3,False,219,Does not pierce
+Crystal Vile Shard,Mage,Post-WoF,7,161,481.0,25,3.0,0,33,33,1.82,32.0,13,400000,5,True,3051,
+Ballista Staff,Summoner,Post-Golem,13,160,420.0,156,4.7,0,30,30,2.0,1.0,0,750000,8,False,3826,
+Mythril Sword,Melee,Post-WoF,7,160,450.0,50,6.0,0,20,20,3.0,0.0,0,103500,4,True,484,
+Sunfury,Melee,Post-Skeletron,6,160,450.0,64,6.75,7,45,45,1.33,12.0,0,125000,3,False,220,
+Proximity Mine Launcher,Ranger,Post-Plantera,12,152,664.0,80,4.0,0,50,50,1.2,12.0,0,350000,8,True,760,
+Orichalcum Repeater,Ranger,Post-WoF,7,151,,40,2.0,0,19,19,3.16,9.75,0,110000,4,True,1194,Does not pierce
+Cool Whip,Summoner,Post-WoF,7,150,350.0,45,1.5,0,30,30,2.0,4.0,0,200000,4,False,4911,
+Desert Tiger Staff,Summoner,Post-Plantera,12,150,340.0,41,4.0,0,36,36,1.67,10.0,0,1000000,8,True,4607,
 Flower of Fire,Mage,Post-Skeletron,6,150,,48,5.5,0,16,16,3.75,7.5,12,125000,3,False,112,Does not pierce
-Lasser Rifle,Mage,Post-WoF,7,150,470,29,2.5,0,12,12,5,17,8,150000,4,True,514,
-Sergeant United Shield,Melee,Post-WoF,7,150,400,80,2,0,36,36,1.67,10,0,350000,5,False,4760,
-Titanium Sword,Melee,Post-WoF,7,150,550,61,6,0,20,20,3,0,0,161000,4,True,1199,
-Daedalus Stormbow,Ranger,Post-WoF,7,145,360,38,2.25,0,19,19,3.16,12.5,0,400000,6,True,3029,Difficult measure
-Cobalt Sword,Melee,Post-WoF,7,140,400,40,5,0,19,19,3.16,0,0,69000,4,True,483,
-Terraprisma,Summoner,Post-EoL,14,140,490,90,4,0,36,36,1.67,10,0,1000000,5,True,5005,If daylight
-Boomstick,Ranger,Pre-Boss,1,132,132,14,5.75,0,40,40,1.5,5.35,0,100000,2,False,964,"If all pellets hit, Does not pierce"
-Blue Moon,Melee,Post-Skeletron,6,130,400,54,6,0,45,45,1.33,12,0,87500,2,False,163,
-Cascade,Melee,Post-Skeletron,6,130,130,27,4.3,0,25,25,2.4,16,0,90000,3,False,3282,
-Combat Wrench,Melee,Post-Skeletron,6,130,450,25,3.5,0,15,15,4,8.5,0,25000,2,False,4818,
-Flamarang,Melee,Post-Brain/Worm,3,130,180,49,8,0,20,20,3,14,0,100000,3,False,119,
-Flying Knife,Melee,Post-WoF,7,130,450,40,4.5,0,15,15,4,17,0,400000,6,False,3030,
-Handgun,Ranger,Post-Skeletron,6,130,,26,3,0,15,15,4,10,0,87500,2,False,164,Does not pierce
-Palladium Sword,Melee,Post-WoF,7,130,400,49,5.5,0,22,22,2.73,0,0,92000,4,True,1185,
-Starfury,Melee,Pre-Boss,1,130,260,25,5,0,40,20,1.5,25,0,50000,2,False,65,Only 2 Dummies
-Mythril Repeater,Ranger,Post-WoF,7,128,,39,2,0,20,20,3,9.5,0,90000,4,True,436,Does not pierce
-Hellwing Bow,Ranger,Post-Skeletron,6,120,320,22,5.5,0,13,13,4.62,6,0,125000,3,True,3019,
-Pearlwood Sword,Melee,Pre-Boss,1,120,370,30,7,0,15,15,4,0,0,100,0,True,659,
-Valor,Melee,Post-Skeletron,6,120,150,28,3.85,0,25,25,2.4,16,0,87500,3,False,3317,
-The Bee's Knees,Ranger,Post-QueenBee,4,117,190,23,3,0,23,23,2.61,8,0,100000,3,False,2888,Damage does not take the bees follow up damage into consideration
+Lasser Rifle,Mage,Post-WoF,7,150,470.0,29,2.5,0,12,12,5.0,17.0,8,150000,4,True,514,
+Sergeant United Shield,Melee,Post-WoF,7,150,400.0,80,2.0,0,36,36,1.67,10.0,0,350000,5,False,4760,
+Titanium Sword,Melee,Post-WoF,7,150,550.0,61,6.0,0,20,20,3.0,0.0,0,161000,4,True,1199,
+Daedalus Stormbow,Ranger,Post-WoF,7,145,360.0,38,2.25,0,19,19,3.16,12.5,0,400000,6,True,3029,Difficult measure
+Cobalt Sword,Melee,Post-WoF,7,140,400.0,40,5.0,0,19,19,3.16,0.0,0,69000,4,True,483,
+Terraprisma,Summoner,Post-EoL,14,140,490.0,90,4.0,0,36,36,1.67,10.0,0,1000000,5,True,5005,If daylight
+Boomstick,Ranger,Pre-Boss,1,132,132.0,14,5.75,0,40,40,1.5,5.35,0,100000,2,False,964,"If all pellets hit, Does not pierce"
+Blue Moon,Melee,Post-Skeletron,6,130,400.0,54,6.0,0,45,45,1.33,12.0,0,87500,2,False,163,
+Cascade,Melee,Post-Skeletron,6,130,130.0,27,4.3,0,25,25,2.4,16.0,0,90000,3,False,3282,
+Combat Wrench,Melee,Post-Skeletron,6,130,450.0,25,3.5,0,15,15,4.0,8.5,0,25000,2,False,4818,
+Flamarang,Melee,Post-Brain/Worm,3,130,180.0,49,8.0,0,20,20,3.0,14.0,0,100000,3,False,119,
+Flying Knife,Melee,Post-WoF,7,130,450.0,40,4.5,0,15,15,4.0,17.0,0,400000,6,False,3030,
+Handgun,Ranger,Post-Skeletron,6,130,,26,3.0,0,15,15,4.0,10.0,0,87500,2,False,164,Does not pierce
+Palladium Sword,Melee,Post-WoF,7,130,400.0,49,5.5,0,22,22,2.73,0.0,0,92000,4,True,1185,
+Starfury,Melee,Pre-Boss,1,130,260.0,25,5.0,0,40,20,1.5,25.0,0,50000,2,False,65,Only 2 Dummies
+Mythril Repeater,Ranger,Post-WoF,7,128,,39,2.0,0,20,20,3.0,9.5,0,90000,4,True,436,Does not pierce
+Hellwing Bow,Ranger,Post-Skeletron,6,120,320.0,22,5.5,0,13,13,4.62,6.0,0,125000,3,True,3019,
+Pearlwood Sword,Melee,Pre-Boss,1,120,370.0,30,7.0,0,15,15,4.0,0.0,0,100,0,True,659,
+Valor,Melee,Post-Skeletron,6,120,150.0,28,3.85,0,25,25,2.4,16.0,0,87500,3,False,3317,
+The Bee's Knees,Ranger,Post-QueenBee,4,117,190.0,23,3.0,0,23,23,2.61,8.0,0,100000,3,False,2888,Damage does not take the bees follow up damage into consideration
 Palladium repeater,Ranger,Post-WoF,7,116,,37,1.75,0,22,22,2.73,9.25,0,80000,4,True,1187,Does not pierce
-Sandgun,Ranger,Pre-Boss,1,113,,30,5,0,16,16,3.75,12,0,10000,2,True,266,Does not pierce
-Bone,Ranger,Post-Skeletron,6,112,,20,2.3,0,12,12,5,8,0,50,0,False,154,Does not pierce
-Bladed Glove,Melee,Pre-Boss,1,110,350,14,4,0,8,8,7.5,0,0,50000,2,True,1827,
+Sandgun,Ranger,Pre-Boss,1,113,,30,5.0,0,16,16,3.75,12.0,0,10000,2,True,266,Does not pierce
+Bone,Ranger,Post-Skeletron,6,112,,20,2.3,0,12,12,5.0,8.0,0,50,0,False,154,Does not pierce
+Bladed Glove,Melee,Pre-Boss,1,110,350.0,14,4.0,0,8,8,7.5,0.0,0,50000,2,True,1827,
 Dart Rifle,Ranger,Post-WoF,7,110,,52,5.5,0,38,38,1.58,14.5,0,400000,5,True,3008,Does not pierce
-Golden Shower,Mage,Post-WoF,7,110,336,30,4,0,6,18,10,10,7,200000,4,True,1336,Inflicts Ichor
-Harpoon,Ranger,Pre-Boss,1,110,,25,6,0,30,30,2,15,0,27000,2,True,160,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
-Hive-Five,Melee,Post-QueenBee,4,110,130,24,3.75,0,25,25,2.4,10,0,35000,3,False,5294,
-Molten Fury,Ranger,Post-Skeletron,6,110,,31,2,0,22,22,2.73,8,0,27000,3,False,120,Does not pierce
-Night's Edge,Melee,Post-SkeletronPrime,11,110,310,40,4.5,0,25,25,2.4,5,0,200000,3,True,273,
-Staff of the Frost Hydra,Summoner,Post-Plantera,12,110,300,100,7.5,0,30,30,2,14,0,1000000,8,False,1572,
-Storm Spear,Melee,Pre-Boss,1,110,200,14,6,0,28,28,2.14,3.5,0,15000,1,False,4061,Doesn't Pierce
-Swordfish,Melee,Pre-Boss,1,110,240,19,4.25,0,20,20,3,4,0,25000,2,False,2332,
-Xeno Staff,Summoner,Post-Golem,13,110,,36,2,0,36,36,1.67,10,0,500000,8,True,2749,Does not pierce
-Cobalt repeater,Ranger,Post-WoF,7,107,,35,1.5,0,23,23,2.61,9,0,60000,4,True,435,Does not pierce
-Pew-matic Horn,Ranger,Post-Deerclops,5,104,,20,1,0,15,15,4,14,0,75000,2,True,5117,Does not pierce
-Minishark,Ranger,Pre-Boss,1,102,,6,0,0,8,8,7.5,7,0,350000,2,True,98,Does not pierce
-Bee Keeper,Melee,Post-QueenBee,4,100,280,30,5.3,0,20,20,3,0,0,100000,3,True,1123,
-Flamelash,Mage,Post-Skeletron,6,100,180,32,6.5,0,30,30,2,6,21,125000,3,False,218,
-Phaseblade,Melee,Post-Brain/Worm,3,100,250,26,3,0,18,18,3.33,14,0,27000,1,True,199,
-Stardust Cell Staff,Summoner,Post-Cultist,15,100,300,60,2,0,36,36,1.67,10,0,500000,10,True,3474,Does not pierce
-Tempest Staff,Summoner,Post-WoF,7,100,,50,2,0,36,36,1.67,10,0,250000,8,True,2621,Does not pierce
-Thorn Chakram,Melee,Pre-Boss,1,100,280,25,8,0,15,15,4,14,0,50000,3,False,191,
-Bee Gun,Mage,Post-QueenBee,4,95,270,9,0.25,0,12,12,5,8,5,100000,2,True,1121,
-Dart Pistol,Ranger,Post-WoF,7,90,,28,3.5,0,22,22,2.73,13,0,400000,5,True,3007,Does not pierce
-Enchanted Sword,Melee,Pre-Boss,1,90,220,23,4.25,0,45,21,1.33,9.5,0,150000,2,True,989,Doesn't Pierce
-Explosive Trap Staff,Summoner,Post-Golem,13,90,245,126,0.5,0,30,30,2,1,0,750000,8,False,3834,
-Firecracker,Summoner,Post-WoF,7,90,200,37,2,0,30,30,2,4,0,150000,4,False,4912,
-Gladius,Melee,Pre-Boss,1,90,200,15,3,0,6,18,10,2.4,0,15000,1,False,4463,
-Gray Zapinator,Mage,Post-Eye,2,90,120,42,6,0,36,36,1.67,15,16,170000,2,False,4347,Difficult to measure
-Frost Daggerfish,Ranger,Pre-Boss,1,86,256,17,3.5,0,13,13,4.62,12.5,0,80,1,False,3197,
-Revolver,Ranger,Pre-Boss,1,86,,20,4.5,0,22,22,2.73,16,0,150000,2,False,2269,Is Pre-Boss because it can be obtained after 1 blood/shadow orb has been broken
-Code 1,Melee,Post-Eye,2,85,110,21,3.25,0,25,25,2.4,16,0,50000,2,False,3262,
-Amazon,Melee,Pre-Boss,1,80,80,18,3.75,0,25,25,2.4,16,0,65000,3,False,3281,
-Bloody Machete,Melee,Pre-Boss,1,80,160,20,5,0,15,15,4,15,0,50000,2,False,1825,Only 2 Dummies
-Deadly Sphere Staff,Summoner,Post-SkeletronPrime,11,80,320,55,2,0,36,36,1.67,10,0,500000,8,True,3249,
-Falcon Blade,Melee,Pre-Boss,1,80,220,25,6,0,20,20,3,0,0,10000,4,True,2608,
-Fruitcake Chakram,Melee,Pre-Boss,1,80,80,19,8,0,15,15,4,11,0,50000,1,False,1918,
-Musket,Ranger,Pre-Boss,1,80,,31,5.25,8,32,32,1.88,9,0,75000,1,False,96,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
-Optic Staff,Summoner,Post-Twins,10,80,280,24,2,0,36,36,1.67,10,0,100000,5,True,2535,
-Paintball Gun,Ranger,Pre-Boss,1,80,,12,1.25,7,9,24,6.67,10,0,25000,2,False,3350,Does not pierce
-Raven Staff,Summoner,Post-Plantera,12,80,,55,3,0,28,28,2.14,10,0,500000,8,True,1802,Does not pierce
-Spider Staff,Summoner,Post-WoF,7,80,230,26,3,0,36,36,1.67,10,0,50000,4,True,2551,
-The Undertaker,Ranger,Pre-Boss,1,80,,19,2,0,20,20,3,6,0,75000,1,False,800,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
-Flintlock Pistol,Ranger,Pre-Boss,1,76,,13,1,6,16,16,3.75,6,0,50000,1,False,95,Does not pierce
-Muramasa,Melee,Post-Skeletron,6,75,250,24,3,0,18,18,3.33,0,0,87500,2,True,155,
-Water Bolt,Mage,Post-Skeletron,6,72,282,19,5,0,17,17,3.53,4.5,10,75000,2,True,165,"It can be obtained in pre boss, but normally post skeletron"
-Aqua Scepter,Mage,Post-Skeletron,6,71,221,27,7,0,8,16,7.5,12.5,7,87500,2,True,157,
-Ball O' Hurt,Melee,Pre-Boss,1,70,200,30,5.5,0,45,45,1.33,12,0,75000,1,False,162,
-Blade of Grass,Melee,Pre-Boss,1,70,180,18,4.5,0,20,20,3,20,0,27000,3,False,190,
-Chain Knife,Melee,Pre-Boss,1,70,140,12,3.5,0,20,20,3,12,0,12500,1,False,1325,Only 2 Dummies
-Crimson Rod,Mage,Pre-Boss,1,70,100,12,0,0,24,24,2.5,12,30,75000,1,False,1256,
-Gold Shortsword,Melee,Pre-Boss,1,70,190,12,5,0,11,11,5.45,2.1,0,7000,0,False,3519,
-Ice Blade,Melee,Pre-Boss,1,70,180,17,4.75,2,55,20,1.09,9.5,0,20000,1,True,724,
-Platinum Shortsword,Melee,Pre-Boss,1,70,240,13,5,0,10,10,6,2.1,0,10500,0,False,3483,
-Spinal Tap,Summoner,Post-Skeletron,6,70,215,29,2,0,30,30,2,5,0,75000,2,False,5074,
-The Meatball,Melee,Post-Eye,2,70,240,34,5.5,0,45,45,1.33,12,0,27000,1,False,801,
-Vampire Frog Staff,Summoner,Pre-Boss,1,70,200,11,5,0,36,36,1.67,10,0,50000,3,True,4273,
-Ballista Cane,Summoner,Post-Destroyer,9,65,200,74,4.7,0,30,30,2,1,0,250000,5,False,3825,
-Classy Cane,Melee,Post-WoF,7,65,180,40,3.5,0,15,15,4,0,0,100000,3,False,3351,
-Exotic Scimitar,Melee,Pre-Boss,1,65,190,20,4.25,0,18,18,3.33,0,0,25000,2,False,3349,
-Light's Bane,Melee,Post-Eye,2,65,160,16,5,0,20,20,3,0,0,13500,1,False,46,
-Lightning Aura Staff,Summoner,Post-Golem,13,65,200,34,0.25,0,30,30,2,1,0,750000,8,False,3831,
-Pygmy Staff,Summoner,Post-Plantera,12,65,,40,3,0,28,28,2.14,10,0,350000,7,True,1157,Does not pierce
-Queen Spider Staff,Summoner,Post-WoF,7,65,,26,7.5,0,30,30,2,14,0,250000,4,False,2366,Does not pierce
-Ruler,Melee,Pre-Boss,1,65,220,12,0.5,0,5,20,12,2.4,0,1000,1,True,486,
-Shroomerang,Melee,Pre-Boss,1,65,90,23,7,0,20,20,3,10.5,0,30000,1,False,4764,
-Space Gun,Mage,Post-Brain/Worm,3,65,200,20,0.75,0,17,17,3.53,10,6,20000,1,True,127,
-Stylish Scissors,Melee,Pre-Boss,1,65,210,14,5,0,13,13,4.62,15,0,25000,2,True,3352,
-Trimarang,Melee,Pre-Boss,1,65,120,21,4.5,0,20,20,3,11.5,0,100000,3,True,5298,
-Star Anise,Ranger,Pre-Boss,1,64,188,14,0,0,15,15,4,12,0,25,0,False,1913,
-Magic Missile,Mage,Post-Skeletron,6,63,185,35,7.5,0,22,22,2.73,6,14,87500,2,False,113,
-Bone Throwing Knife,Ranger,Pre-Boss,1,62,208,14,1.5,0,14,14,4.29,10,0,50,1,True,3379,
-Artery,Melee,Post-Eye,2,60,80,17,4,0,25,25,2.4,16,0,50000,1,False,3280,
-Flameburst Staff,Summoner,Post-Golem,13,60,115,88,3,0,30,30,2,1,0,750000,8,False,3820,Only two dummies
-Ice Boomerang,Melee,Pre-Boss,1,60,70,21,8.5,2,20,20,3,11.5,0,50000,1,False,670,
-Katana,Melee,Pre-Boss,1,60,170,18,3.5,15,20,20,3,0,0,50000,1,True,2273,
-Malaise,Melee,Post-Eye,2,60,70,16,4.5,0,25,25,2.4,16,0,50000,1,False,3279,
-Mandible Blade,Melee,Pre-Boss,1,60,160,16,4.5,7,15,15,4,11,0,5000,2,True,3772,
-Pirate Staff,Summoner,Post-WoF,7,60,165,40,6,0,36,36,1.67,10,0,50000,5,True,2584,
-Purple Clubberfish,Melee,Pre-Boss,1,60,180,35,8,0,35,35,1.71,0,0,50000,1,True,2330,
-Rockfish,Melee,Pre-Boss,1,60,180,24,6,0,14,24,4.29,0,0,75000,3,True,2320,
-Snowball Cannon,Ranger,Pre-Boss,1,60,,10,1,0,19,19,3.16,11,0,100000,1,True,1319,Does not pierce
-The Rotted Fork,Melee,Post-Eye,2,60,200,17,5,0,31,31,1.94,4,0,75000,1,False,802,
-Tungsten Shortsword,Melee,Pre-Boss,1,60,160,10,4,0,11,11,5.45,2.1,0,5250,0,False,3489,
-Vilethorn,Mage,Pre-Boss,1,60,200,10,1,0,28,28,2.14,32,10,75000,1,False,64,
-Volcano,Melee,Post-Brain/Worm,3,60,180,40,6.5,0,40,40,1.5,0,0,27000,3,False,121,
-Poisoned Knife,Ranger,Pre-Boss,1,56,123,14,2.4,4,15,15,4,12,0,60,0,True,287,Only two dummies
-Diamond Staff,Mage,Pre-Boss,1,55,131,23,5.5,0,26,26,2.31,9.5,8,30000,2,True,744,Pierces 2 dummies
-Tentacle Spike,Melee,Pre-Boss,1,55,170,20,5.5,0,21,21,2.86,0,0,25000,2,False,5094,
-Trident,Melee,Pre-Boss,1,55,140,14,6,0,31,31,1.94,4,0,10000,1,False,277,
-Blowgun,Ranger,Post-QueenSlime,8,52,,27,4,0,35,35,1.71,13,0,50000,3,True,986,Does not pierce
-Pearlwood Bow,Ranger,Pre-Boss,1,52,,12,0,0,20,20,3,7,0,100,0,False,661,Does not pierce
-Rotten Egg,Ranger,Pre-Boss,1,52,,13,6.5,0,19,19,3.16,9,0,0,0,False,1809,Does not pierce
-Abigail's Flower,Summoner,Pre-Boss,1,50,17,6,2,0,36,36,1.67,10,0,25000,3,True,5114,
-Blood Butcherer,Melee,Post-Brain/Worm,3,50,150,22,5,0,25,25,2.4,0,0,13500,1,False,795,
-Bone Sword,Melee,Pre-Boss,1,50,140,19,5.5,0,22,22,2.73,0,0,9000,3,False,1166,
-Flymeal,Melee,Pre-Boss,1,50,150,15,5,0,17,17,3.53,0,0,17500,2,False,5129,
-Gold Broadsword,Melee,Pre-Boss,1,50,150,15,6.5,0,18,18,3.33,0,0,9000,0,False,3520,
-Lead Shortsword,Melee,Pre-Boss,1,50,130,9,4,0,12,12,5,2.1,0,2100,0,False,3495,
-Platinum Broadsword,Melee,Pre-Boss,1,50,160,16,6.5,0,17,17,3.53,0,0,13500,0,False,3484,
-Tendon Bow,Ranger,Post-Brain/Worm,3,50,,19,1,0,30,30,2,6.7,0,18000,1,False,796,Does not pierce
-Throwing Knife,Ranger,Pre-Boss,1,50,112,12,2,0,15,15,4,10,0,50,0,False,279,Only two dummies
-Ruby Staff,Mage,Pre-Boss,1,49,117,21,4.75,0,28,28,2.14,9,7,20000,1,True,743,Pierces 2 dummies
-Bone Javeline,Ranger,Pre-Boss,1,48,,20,5,0,25,25,2.4,10,0,50,1,True,3378,
-Amber Staff,Mage,Pre-Boss,1,45,100,21,4.75,0,28,28,2.14,9,7,20000,1,True,3377,Only 2 Dummies
-Demon Bow,Ranger,Post-Brain/Worm,3,45,,14,1,0,25,25,2.4,6.7,0,18000,1,False,44,Does not pierce
-Enchanted Boomerang,Melee,Pre-Boss,1,45,60,17,8,0,20,20,3,10,0,50000,1,False,55,
-Flaming Mace,Melee,Pre-Boss,1,45,125,18,4.6,0,45,45,1.33,11,0,100000,1,False,5012,
-Mace,Melee,Pre-Boss,1,45,130,18,4.6,0,45,45,1.33,11,0,100000,1,False,5011,
-Rally,Melee,Pre-Boss,1,45,45,14,3.5,0,25,25,2.4,16,0,25000,1,False,3285,
-Silver Broadsword,Melee,Pre-Boss,1,45,120,14,6,0,20,20,3,0,0,4500,0,False,3514,
-Silver Shortsword,Melee,Pre-Boss,1,45,130,9,4,0,12,12,5,2.1,0,3500,0,False,3513,
-Snapthorn,Summoner,Pre-Boss,1,45,100,18,1.5,0,30,30,2,4,0,50000,3,False,4913,
-Thunder Zapper,Mage,Pre-Boss,1,45,,24,3,0,17,17,3.53,8,6,15000,1,True,4062,
-Javeline,Ranger,Pre-Boss,1,44,150,17,4.75,0,24,24,2.5,11.5,0,25,0,False,3094,
-Red Ryder,Ranger,Pre-Boss,1,44,,20,3.75,0,38,38,1.58,8,0,100000,1,True,1870,Does not pierce
-Shuriken,Ranger,Pre-Boss,1,44,140,10,0,0,15,15,4,9,0,15,0,False,42,
-Platinum Bow,Ranger,Pre-Boss,1,42,,13,0,0,25,25,2.4,6.6,0,10500,0,False,3480,Does not pierce
-Weather Pain,Mage,Post-Deerclops,5,41,105,13,1,0,45,45,1.33,1,30,75000,2,False,5118,
-Ash Wood Sword,Melee,Pre-Boss,1,40,130,13,5,0,17,17,3.53,0,0,100,0,False,5284,
-Bat Bat,Melee,Pre-Boss,1,40,130,36,5.5,0,40,40,1.5,0,0,12500,2,False,5097,
-Candy Cane Sword,Melee,Pre-Boss,1,40,120,19,5.3,0,27,27,2.22,0,0,13500,1,False,1909,
-Explosive Trap Cane,Summoner,Post-Destroyer,9,40,120,59,0.5,0,30,30,2,1,0,250000,5,False,3833,
-Iron Shortsword,Melee,Pre-Boss,1,40,120,8,4,0,12,12,5,2.1,0,1400,0,False,6,
-Lead Broadsword,Melee,Pre-Boss,1,40,110,13,5.5,0,20,20,3,0,0,2700,0,False,3496,
-Spear,Melee,Pre-Boss,1,40,80,8,6.5,0,31,31,1.94,3.7,0,1000,0,False,280,
-Tragic Umbrella,Melee,Pre-Boss,1,40,80,15,5,0,22,22,2.73,0,0,100000,2,False,4707,Only 2 Dummies
-Tungsten Broadsword,Melee,Pre-Boss,1,40,130,14,6,0,19,19,3.16,0,0,6750,0,False,3490,
-Zombie Arm,Melee,Pre-Boss,1,40,120,15,5.5,0,22,22,2.73,0,0,2000,0,True,1304,
-Ashwood Bow,Ranger,Pre-Boss,1,36,,10,0,0,25,25,2.4,6.6,0,100,0,False,5282,Does not pierce
-Gold Bow,Ranger,Pre-Boss,1,36,,11,0,0,26,26,2.31,6.6,0,7000,0,False,3516,Does not pierce
-Emerald Staff,Mage,Pre-Boss,1,35,96,19,4.25,0,32,32,1.88,8,6,15000,1,True,742,Pierces 2 dummies
-Tin Shortsword,Melee,Pre-Boss,1,35,110,7,4,0,12,12,5,2.1,0,525,0,False,3501,
-Tungsten Bow,Ranger,Pre-Boss,1,34,,10,0,0,26,26,2.31,6.6,0,5250,0,False,3486,Does not pierce
-Blowpipe,Ranger,Pre-Boss,1,32,,9,3.5,0,25,25,2.4,11,0,10000,0,True,281,Does not pierce
-Silver Bow,Ranger,Pre-Boss,1,32,,9,0,0,27,27,2.22,6.6,0,3500,0,False,3510,Does not pierce
-Lead Bow,Ranger,Pre-Boss,1,31,,9,0,0,27,27,2.22,6.6,0,2100,0,False,3492,Does not pierce
-Blade Staff,Summoner,Post-QueenSlime,8,30,85,6,0,0,36,36,1.67,10,0,50000,5,True,4758,
-Ebonwood Sword,Melee,Pre-Boss,1,30,100,11,6,0,19,19,3.16,0,0,100,0,False,653,
-Gravedigger's Shovel,Melee,Pre-Boss,1,30,100,12,3.5,0,14,22,4.29,0,0,5000,1,True,4711,
-Iron Broadsword,Melee,Pre-Boss,1,30,100,12,5.5,0,20,20,3,0,0,1800,0,False,4,
-Leather Whip,Summoner,Pre-Boss,1,30,60,14,1,0,30,30,2,4,0,100000,1,False,4672,
-Sanguine Staff,Summoner,Post-WoF,7,30,120,35,3,0,36,36,1.67,10,0,250000,4,True,4269,
-Shadewood Sword,Melee,Pre-Boss,1,30,100,11,6,0,19,19,3.16,0,0,100,0,False,921,
-Slime Staff,Summoner,Pre-Boss,1,30,80,8,2,0,28,28,2.14,10,0,100000,4,True,1309,
-Tin Broadsword,Melee,Pre-Boss,1,30,85,10,5.5,0,20,20,3,0,0,675,0,False,3502,
-Wooden Boomerang,Melee,Pre-Boss,1,30,40,10,5,0,20,20,3,6.5,0,10000,1,False,284,
-Ebonwood Bow,Ranger,Pre-Boss,1,29,,8,0,0,28,28,2.14,6.6,0,100,0,False,655,Does not pierce
-Iron Bow,Ranger,Pre-Boss,1,29,,8,0,0,28,28,2.14,6.6,0,1400,0,False,99,Does not pierce
-Shadewood Bow,Ranger,Pre-Boss,1,29,,8,0,0,28,28,2.14,6.6,0,100,0,False,923,Does not pierce
-Wand of Sparkling,Mage,Pre-Boss,1,28,64,14,0,10,26,26,2.31,7,2,10000,1,False,3069,Pierces 2 dummies
-Ale Tosser,Ranger,Post-Brain/Worm,3,27,,32,4,0,32,32,1.88,11,0,12500,2,False,3821,Does not pierce
-Copper Broadsword,Melee,Pre-Boss,1,27,75,9,5.5,0,20,21,3,0,0,450,0,False,3508,
-Tin Bow,Ranger,Pre-Boss,1,26,,7,0,0,28,28,2.14,6.6,0,525,0,False,3498,Does not pierce
-Ballista Rod,Summoner,Pre-Boss,1,25,80,30,4.7,0,30,30,2,1,0,50000,3,False,3824,
-Bloodrain Bow,Ranger,Pre-Boss,1,25,70,14,3,0,19,19,3.16,9,0,50000,3,True,4381,Does not pierce
-Copper Shortsword,Melee,Pre-Boss,1,25,70,5,4,0,13,13,4.62,2.1,0,350,0,False,3507,
-Flameburst Cane,Summoner,Post-Destroyer,9,25,50,42,3,0,30,30,2,1,0,250000,5,False,3819,Only two dummies
-Palm Wood Sword,Melee,Pre-Boss,1,25,75,8,6,0,19,19,3.16,0,0,100,0,False,2517,
-Sapphire Staff,Mage,Pre-Boss,1,25,,18,4,0,34,34,1.76,7.5,6,10000,1,True,741,Does not pierce
-Sickle,Melee,Pre-Boss,1,25,70,9,2.25,0,24,24,2.5,0,0,6000,0,True,1786,
-Umbrella,Melee,Pre-Boss,1,25,50,10,5,0,22,22,2.73,0,0,10000,1,False,946,Only 2 Dummies
-Palm Wood Bow,Ranger,Pre-Boss,1,24,,6,0,0,29,29,2.07,6.6,0,100,0,False,2515,Does not pierce
-Boreal Wood Bow,Ranger,Pre-Boss,1,22,,6,0,0,29,29,2.07,6.6,0,100,0,False,2747,Does not pierce
-Copper Bow,Ranger,Pre-Boss,1,22,,6,0,0,29,29,2.07,6.6,0,350,0,False,3504,Does not pierce
-Rich Mahagony Bow,Ranger,Pre-Boss,1,22,,6,0,0,29,29,2.07,6.6,0,100,0,False,658,Does not pierce
+Golden Shower,Mage,Post-WoF,7,110,336.0,30,4.0,0,6,18,10.0,10.0,7,200000,4,True,1336,Inflicts Ichor
+Harpoon,Ranger,Pre-Boss,1,110,,25,6.0,0,30,30,2.0,15.0,0,27000,2,True,160,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
+Hive-Five,Melee,Post-QueenBee,4,110,130.0,24,3.75,0,25,25,2.4,10.0,0,35000,3,False,5294,
+Molten Fury,Ranger,Post-Skeletron,6,110,,31,2.0,0,22,22,2.73,8.0,0,27000,3,False,120,Does not pierce
+Night's Edge,Melee,Post-SkeletronPrime,11,110,310.0,40,4.5,0,25,25,2.4,5.0,0,200000,3,True,273,
+Staff of the Frost Hydra,Summoner,Post-Plantera,12,110,300.0,100,7.5,0,30,30,2.0,14.0,0,1000000,8,False,1572,
+Storm Spear,Melee,Pre-Boss,1,110,200.0,14,6.0,0,28,28,2.14,3.5,0,15000,1,False,4061,Doesn't Pierce
+Swordfish,Melee,Pre-Boss,1,110,240.0,19,4.25,0,20,20,3.0,4.0,0,25000,2,False,2332,
+Xeno Staff,Summoner,Post-Golem,13,110,,36,2.0,0,36,36,1.67,10.0,0,500000,8,True,2749,Does not pierce
+Cobalt repeater,Ranger,Post-WoF,7,107,,35,1.5,0,23,23,2.61,9.0,0,60000,4,True,435,Does not pierce
+Pew-matic Horn,Ranger,Post-Deerclops,5,104,,20,1.0,0,15,15,4.0,14.0,0,75000,2,True,5117,Does not pierce
+Minishark,Ranger,Pre-Boss,1,102,,6,0.0,0,8,8,7.5,7.0,0,350000,2,True,98,Does not pierce
+Bee Keeper,Melee,Post-QueenBee,4,100,280.0,30,5.3,0,20,20,3.0,0.0,0,100000,3,True,1123,
+Flamelash,Mage,Post-Skeletron,6,100,180.0,32,6.5,0,30,30,2.0,6.0,21,125000,3,False,218,
+Phaseblade,Melee,Post-Brain/Worm,3,100,250.0,26,3.0,0,18,18,3.33,14.0,0,27000,1,True,199,
+Stardust Cell Staff,Summoner,Post-Cultist,15,100,300.0,60,2.0,0,36,36,1.67,10.0,0,500000,10,True,3474,Does not pierce
+Tempest Staff,Summoner,Post-WoF,7,100,,50,2.0,0,36,36,1.67,10.0,0,250000,8,True,2621,Does not pierce
+Thorn Chakram,Melee,Pre-Boss,1,100,280.0,25,8.0,0,15,15,4.0,14.0,0,50000,3,False,191,
+Bee Gun,Mage,Post-QueenBee,4,95,270.0,9,0.25,0,12,12,5.0,8.0,5,100000,2,True,1121,
+Dart Pistol,Ranger,Post-WoF,7,90,,28,3.5,0,22,22,2.73,13.0,0,400000,5,True,3007,Does not pierce
+Enchanted Sword,Melee,Pre-Boss,1,90,220.0,23,4.25,0,45,21,1.33,9.5,0,150000,2,True,989,Doesn't Pierce
+Explosive Trap Staff,Summoner,Post-Golem,13,90,245.0,126,0.5,0,30,30,2.0,1.0,0,750000,8,False,3834,
+Firecracker,Summoner,Post-WoF,7,90,200.0,37,2.0,0,30,30,2.0,4.0,0,150000,4,False,4912,
+Gladius,Melee,Pre-Boss,1,90,200.0,15,3.0,0,6,18,10.0,2.4,0,15000,1,False,4463,
+Gray Zapinator,Mage,Post-Eye,2,90,120.0,42,6.0,0,36,36,1.67,15.0,16,170000,2,False,4347,Difficult to measure
+Frost Daggerfish,Ranger,Pre-Boss,1,86,256.0,17,3.5,0,13,13,4.62,12.5,0,80,1,False,3197,
+Revolver,Ranger,Pre-Boss,1,86,,20,4.5,0,22,22,2.73,16.0,0,150000,2,False,2269,Is Pre-Boss because it can be obtained after 1 blood/shadow orb has been broken
+Code 1,Melee,Post-Eye,2,85,110.0,21,3.25,0,25,25,2.4,16.0,0,50000,2,False,3262,
+Amazon,Melee,Pre-Boss,1,80,80.0,18,3.75,0,25,25,2.4,16.0,0,65000,3,False,3281,
+Bloody Machete,Melee,Pre-Boss,1,80,160.0,20,5.0,0,15,15,4.0,15.0,0,50000,2,False,1825,Only 2 Dummies
+Deadly Sphere Staff,Summoner,Post-SkeletronPrime,11,80,320.0,55,2.0,0,36,36,1.67,10.0,0,500000,8,True,3249,
+Falcon Blade,Melee,Pre-Boss,1,80,220.0,25,6.0,0,20,20,3.0,0.0,0,10000,4,True,2608,
+Fruitcake Chakram,Melee,Pre-Boss,1,80,80.0,19,8.0,0,15,15,4.0,11.0,0,50000,1,False,1918,
+Musket,Ranger,Pre-Boss,1,80,,31,5.25,8,32,32,1.88,9.0,0,75000,1,False,96,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
+Optic Staff,Summoner,Post-Twins,10,80,280.0,24,2.0,0,36,36,1.67,10.0,0,100000,5,True,2535,
+Paintball Gun,Ranger,Pre-Boss,1,80,,12,1.25,7,9,24,6.67,10.0,0,25000,2,False,3350,Does not pierce
+Raven Staff,Summoner,Post-Plantera,12,80,,55,3.0,0,28,28,2.14,10.0,0,500000,8,True,1802,Does not pierce
+Spider Staff,Summoner,Post-WoF,7,80,230.0,26,3.0,0,36,36,1.67,10.0,0,50000,4,True,2551,
+The Undertaker,Ranger,Pre-Boss,1,80,,19,2.0,0,20,20,3.0,6.0,0,75000,1,False,800,Is Pre-Boss because it can be obtained from 1 blood/shadow orb
+Flintlock Pistol,Ranger,Pre-Boss,1,76,,13,1.0,6,16,16,3.75,6.0,0,50000,1,False,95,Does not pierce
+Muramasa,Melee,Post-Skeletron,6,75,250.0,24,3.0,0,18,18,3.33,0.0,0,87500,2,True,155,
+Water Bolt,Mage,Post-Skeletron,6,72,282.0,19,5.0,0,17,17,3.53,4.5,10,75000,2,True,165,"It can be obtained in pre boss, but normally post skeletron"
+Aqua Scepter,Mage,Post-Skeletron,6,71,221.0,27,7.0,0,8,16,7.5,12.5,7,87500,2,True,157,
+Ball O' Hurt,Melee,Pre-Boss,1,70,200.0,30,5.5,0,45,45,1.33,12.0,0,75000,1,False,162,
+Blade of Grass,Melee,Pre-Boss,1,70,180.0,18,4.5,0,20,20,3.0,20.0,0,27000,3,False,190,
+Chain Knife,Melee,Pre-Boss,1,70,140.0,12,3.5,0,20,20,3.0,12.0,0,12500,1,False,1325,Only 2 Dummies
+Crimson Rod,Mage,Pre-Boss,1,70,100.0,12,0.0,0,24,24,2.5,12.0,30,75000,1,False,1256,
+Gold Shortsword,Melee,Pre-Boss,1,70,190.0,12,5.0,0,11,11,5.45,2.1,0,7000,0,False,3519,
+Ice Blade,Melee,Pre-Boss,1,70,180.0,17,4.75,2,55,20,1.09,9.5,0,20000,1,True,724,
+Platinum Shortsword,Melee,Pre-Boss,1,70,240.0,13,5.0,0,10,10,6.0,2.1,0,10500,0,False,3483,
+Spinal Tap,Summoner,Post-Skeletron,6,70,215.0,29,2.0,0,30,30,2.0,5.0,0,75000,2,False,5074,
+The Meatball,Melee,Post-Eye,2,70,240.0,34,5.5,0,45,45,1.33,12.0,0,27000,1,False,801,
+Vampire Frog Staff,Summoner,Pre-Boss,1,70,200.0,11,5.0,0,36,36,1.67,10.0,0,50000,3,True,4273,
+Ballista Cane,Summoner,Post-Destroyer,9,65,200.0,74,4.7,0,30,30,2.0,1.0,0,250000,5,False,3825,
+Classy Cane,Melee,Post-WoF,7,65,180.0,40,3.5,0,15,15,4.0,0.0,0,100000,3,False,3351,
+Exotic Scimitar,Melee,Pre-Boss,1,65,190.0,20,4.25,0,18,18,3.33,0.0,0,25000,2,False,3349,
+Light's Bane,Melee,Post-Eye,2,65,160.0,16,5.0,0,20,20,3.0,0.0,0,13500,1,False,46,
+Lightning Aura Staff,Summoner,Post-Golem,13,65,200.0,34,0.25,0,30,30,2.0,1.0,0,750000,8,False,3831,
+Pygmy Staff,Summoner,Post-Plantera,12,65,,40,3.0,0,28,28,2.14,10.0,0,350000,7,True,1157,Does not pierce
+Queen Spider Staff,Summoner,Post-WoF,7,65,,26,7.5,0,30,30,2.0,14.0,0,250000,4,False,2366,Does not pierce
+Ruler,Melee,Pre-Boss,1,65,220.0,12,0.5,0,5,20,12.0,2.4,0,1000,1,True,486,
+Shroomerang,Melee,Pre-Boss,1,65,90.0,23,7.0,0,20,20,3.0,10.5,0,30000,1,False,4764,
+Space Gun,Mage,Post-Brain/Worm,3,65,200.0,20,0.75,0,17,17,3.53,10.0,6,20000,1,True,127,
+Stylish Scissors,Melee,Pre-Boss,1,65,210.0,14,5.0,0,13,13,4.62,15.0,0,25000,2,True,3352,
+Trimarang,Melee,Pre-Boss,1,65,120.0,21,4.5,0,20,20,3.0,11.5,0,100000,3,True,5298,
+Star Anise,Ranger,Pre-Boss,1,64,188.0,14,0.0,0,15,15,4.0,12.0,0,25,0,False,1913,
+Magic Missile,Mage,Post-Skeletron,6,63,185.0,35,7.5,0,22,22,2.73,6.0,14,87500,2,False,113,
+Bone Throwing Knife,Ranger,Pre-Boss,1,62,208.0,14,1.5,0,14,14,4.29,10.0,0,50,1,True,3379,
+Artery,Melee,Post-Eye,2,60,80.0,17,4.0,0,25,25,2.4,16.0,0,50000,1,False,3280,
+Flameburst Staff,Summoner,Post-Golem,13,60,115.0,88,3.0,0,30,30,2.0,1.0,0,750000,8,False,3820,Only two dummies
+Ice Boomerang,Melee,Pre-Boss,1,60,70.0,21,8.5,2,20,20,3.0,11.5,0,50000,1,False,670,
+Katana,Melee,Pre-Boss,1,60,170.0,18,3.5,15,20,20,3.0,0.0,0,50000,1,True,2273,
+Malaise,Melee,Post-Eye,2,60,70.0,16,4.5,0,25,25,2.4,16.0,0,50000,1,False,3279,
+Mandible Blade,Melee,Pre-Boss,1,60,160.0,16,4.5,7,15,15,4.0,11.0,0,5000,2,True,3772,
+Pirate Staff,Summoner,Post-WoF,7,60,165.0,40,6.0,0,36,36,1.67,10.0,0,50000,5,True,2584,
+Purple Clubberfish,Melee,Pre-Boss,1,60,180.0,35,8.0,0,35,35,1.71,0.0,0,50000,1,True,2330,
+Rockfish,Melee,Pre-Boss,1,60,180.0,24,6.0,0,14,24,4.29,0.0,0,75000,3,True,2320,
+Snowball Cannon,Ranger,Pre-Boss,1,60,,10,1.0,0,19,19,3.16,11.0,0,100000,1,True,1319,Does not pierce
+The Rotted Fork,Melee,Post-Eye,2,60,200.0,17,5.0,0,31,31,1.94,4.0,0,75000,1,False,802,
+Tungsten Shortsword,Melee,Pre-Boss,1,60,160.0,10,4.0,0,11,11,5.45,2.1,0,5250,0,False,3489,
+Vilethorn,Mage,Pre-Boss,1,60,200.0,10,1.0,0,28,28,2.14,32.0,10,75000,1,False,64,
+Volcano,Melee,Post-Brain/Worm,3,60,180.0,40,6.5,0,40,40,1.5,0.0,0,27000,3,False,121,
+Poisoned Knife,Ranger,Pre-Boss,1,56,123.0,14,2.4,4,15,15,4.0,12.0,0,60,0,True,287,Only two dummies
+Diamond Staff,Mage,Pre-Boss,1,55,131.0,23,5.5,0,26,26,2.31,9.5,8,30000,2,True,744,Pierces 2 dummies
+Tentacle Spike,Melee,Pre-Boss,1,55,170.0,20,5.5,0,21,21,2.86,0.0,0,25000,2,False,5094,
+Trident,Melee,Pre-Boss,1,55,140.0,14,6.0,0,31,31,1.94,4.0,0,10000,1,False,277,
+Blowgun,Ranger,Post-QueenSlime,8,52,,27,4.0,0,35,35,1.71,13.0,0,50000,3,True,986,Does not pierce
+Pearlwood Bow,Ranger,Pre-Boss,1,52,,12,0.0,0,20,20,3.0,7.0,0,100,0,False,661,Does not pierce
+Rotten Egg,Ranger,Pre-Boss,1,52,,13,6.5,0,19,19,3.16,9.0,0,0,0,False,1809,Does not pierce
+Abigail's Flower,Summoner,Pre-Boss,1,50,17.0,6,2.0,0,36,36,1.67,10.0,0,25000,3,True,5114,
+Blood Butcherer,Melee,Post-Brain/Worm,3,50,150.0,22,5.0,0,25,25,2.4,0.0,0,13500,1,False,795,
+Bone Sword,Melee,Pre-Boss,1,50,140.0,19,5.5,0,22,22,2.73,0.0,0,9000,3,False,1166,
+Flymeal,Melee,Pre-Boss,1,50,150.0,15,5.0,0,17,17,3.53,0.0,0,17500,2,False,5129,
+Gold Broadsword,Melee,Pre-Boss,1,50,150.0,15,6.5,0,18,18,3.33,0.0,0,9000,0,False,3520,
+Lead Shortsword,Melee,Pre-Boss,1,50,130.0,9,4.0,0,12,12,5.0,2.1,0,2100,0,False,3495,
+Platinum Broadsword,Melee,Pre-Boss,1,50,160.0,16,6.5,0,17,17,3.53,0.0,0,13500,0,False,3484,
+Tendon Bow,Ranger,Post-Brain/Worm,3,50,,19,1.0,0,30,30,2.0,6.7,0,18000,1,False,796,Does not pierce
+Throwing Knife,Ranger,Pre-Boss,1,50,112.0,12,2.0,0,15,15,4.0,10.0,0,50,0,False,279,Only two dummies
+Ruby Staff,Mage,Pre-Boss,1,49,117.0,21,4.75,0,28,28,2.14,9.0,7,20000,1,True,743,Pierces 2 dummies
+Bone Javeline,Ranger,Pre-Boss,1,48,,20,5.0,0,25,25,2.4,10.0,0,50,1,True,3378,
+Amber Staff,Mage,Pre-Boss,1,45,100.0,21,4.75,0,28,28,2.14,9.0,7,20000,1,True,3377,Only 2 Dummies
+Demon Bow,Ranger,Post-Brain/Worm,3,45,,14,1.0,0,25,25,2.4,6.7,0,18000,1,False,44,Does not pierce
+Enchanted Boomerang,Melee,Pre-Boss,1,45,60.0,17,8.0,0,20,20,3.0,10.0,0,50000,1,False,55,
+Flaming Mace,Melee,Pre-Boss,1,45,125.0,18,4.6,0,45,45,1.33,11.0,0,100000,1,False,5012,
+Mace,Melee,Pre-Boss,1,45,130.0,18,4.6,0,45,45,1.33,11.0,0,100000,1,False,5011,
+Rally,Melee,Pre-Boss,1,45,45.0,14,3.5,0,25,25,2.4,16.0,0,25000,1,False,3285,
+Silver Broadsword,Melee,Pre-Boss,1,45,120.0,14,6.0,0,20,20,3.0,0.0,0,4500,0,False,3514,
+Silver Shortsword,Melee,Pre-Boss,1,45,130.0,9,4.0,0,12,12,5.0,2.1,0,3500,0,False,3513,
+Snapthorn,Summoner,Pre-Boss,1,45,100.0,18,1.5,0,30,30,2.0,4.0,0,50000,3,False,4913,
+Thunder Zapper,Mage,Pre-Boss,1,45,,24,3.0,0,17,17,3.53,8.0,6,15000,1,True,4062,
+Javeline,Ranger,Pre-Boss,1,44,150.0,17,4.75,0,24,24,2.5,11.5,0,25,0,False,3094,
+Red Ryder,Ranger,Pre-Boss,1,44,,20,3.75,0,38,38,1.58,8.0,0,100000,1,True,1870,Does not pierce
+Shuriken,Ranger,Pre-Boss,1,44,140.0,10,0.0,0,15,15,4.0,9.0,0,15,0,False,42,
+Platinum Bow,Ranger,Pre-Boss,1,42,,13,0.0,0,25,25,2.4,6.6,0,10500,0,False,3480,Does not pierce
+Weather Pain,Mage,Post-Deerclops,5,41,105.0,13,1.0,0,45,45,1.33,1.0,30,75000,2,False,5118,
+Ash Wood Sword,Melee,Pre-Boss,1,40,130.0,13,5.0,0,17,17,3.53,0.0,0,100,0,False,5284,
+Bat Bat,Melee,Pre-Boss,1,40,130.0,36,5.5,0,40,40,1.5,0.0,0,12500,2,False,5097,
+Candy Cane Sword,Melee,Pre-Boss,1,40,120.0,19,5.3,0,27,27,2.22,0.0,0,13500,1,False,1909,
+Explosive Trap Cane,Summoner,Post-Destroyer,9,40,120.0,59,0.5,0,30,30,2.0,1.0,0,250000,5,False,3833,
+Iron Shortsword,Melee,Pre-Boss,1,40,120.0,8,4.0,0,12,12,5.0,2.1,0,1400,0,False,6,
+Lead Broadsword,Melee,Pre-Boss,1,40,110.0,13,5.5,0,20,20,3.0,0.0,0,2700,0,False,3496,
+Spear,Melee,Pre-Boss,1,40,80.0,8,6.5,0,31,31,1.94,3.7,0,1000,0,False,280,
+Tragic Umbrella,Melee,Pre-Boss,1,40,80.0,15,5.0,0,22,22,2.73,0.0,0,100000,2,False,4707,Only 2 Dummies
+Tungsten Broadsword,Melee,Pre-Boss,1,40,130.0,14,6.0,0,19,19,3.16,0.0,0,6750,0,False,3490,
+Zombie Arm,Melee,Pre-Boss,1,40,120.0,15,5.5,0,22,22,2.73,0.0,0,2000,0,True,1304,
+Ashwood Bow,Ranger,Pre-Boss,1,36,,10,0.0,0,25,25,2.4,6.6,0,100,0,False,5282,Does not pierce
+Gold Bow,Ranger,Pre-Boss,1,36,,11,0.0,0,26,26,2.31,6.6,0,7000,0,False,3516,Does not pierce
+Emerald Staff,Mage,Pre-Boss,1,35,96.0,19,4.25,0,32,32,1.88,8.0,6,15000,1,True,742,Pierces 2 dummies
+Tin Shortsword,Melee,Pre-Boss,1,35,110.0,7,4.0,0,12,12,5.0,2.1,0,525,0,False,3501,
+Tungsten Bow,Ranger,Pre-Boss,1,34,,10,0.0,0,26,26,2.31,6.6,0,5250,0,False,3486,Does not pierce
+Blowpipe,Ranger,Pre-Boss,1,32,,9,3.5,0,25,25,2.4,11.0,0,10000,0,True,281,Does not pierce
+Silver Bow,Ranger,Pre-Boss,1,32,,9,0.0,0,27,27,2.22,6.6,0,3500,0,False,3510,Does not pierce
+Lead Bow,Ranger,Pre-Boss,1,31,,9,0.0,0,27,27,2.22,6.6,0,2100,0,False,3492,Does not pierce
+Blade Staff,Summoner,Post-QueenSlime,8,30,85.0,6,0.0,0,36,36,1.67,10.0,0,50000,5,True,4758,
+Ebonwood Sword,Melee,Pre-Boss,1,30,100.0,11,6.0,0,19,19,3.16,0.0,0,100,0,False,653,
+Gravedigger's Shovel,Melee,Pre-Boss,1,30,100.0,12,3.5,0,14,22,4.29,0.0,0,5000,1,True,4711,
+Iron Broadsword,Melee,Pre-Boss,1,30,100.0,12,5.5,0,20,20,3.0,0.0,0,1800,0,False,4,
+Leather Whip,Summoner,Pre-Boss,1,30,60.0,14,1.0,0,30,30,2.0,4.0,0,100000,1,False,4672,
+Sanguine Staff,Summoner,Post-WoF,7,30,120.0,35,3.0,0,36,36,1.67,10.0,0,250000,4,True,4269,
+Shadewood Sword,Melee,Pre-Boss,1,30,100.0,11,6.0,0,19,19,3.16,0.0,0,100,0,False,921,
+Slime Staff,Summoner,Pre-Boss,1,30,80.0,8,2.0,0,28,28,2.14,10.0,0,100000,4,True,1309,
+Tin Broadsword,Melee,Pre-Boss,1,30,85.0,10,5.5,0,20,20,3.0,0.0,0,675,0,False,3502,
+Wooden Boomerang,Melee,Pre-Boss,1,30,40.0,10,5.0,0,20,20,3.0,6.5,0,10000,1,False,284,
+Ebonwood Bow,Ranger,Pre-Boss,1,29,,8,0.0,0,28,28,2.14,6.6,0,100,0,False,655,Does not pierce
+Iron Bow,Ranger,Pre-Boss,1,29,,8,0.0,0,28,28,2.14,6.6,0,1400,0,False,99,Does not pierce
+Shadewood Bow,Ranger,Pre-Boss,1,29,,8,0.0,0,28,28,2.14,6.6,0,100,0,False,923,Does not pierce
+Wand of Sparkling,Mage,Pre-Boss,1,28,64.0,14,0.0,10,26,26,2.31,7.0,2,10000,1,False,3069,Pierces 2 dummies
+Ale Tosser,Ranger,Post-Brain/Worm,3,27,,32,4.0,0,32,32,1.88,11.0,0,12500,2,False,3821,Does not pierce
+Copper Broadsword,Melee,Pre-Boss,1,27,75.0,9,5.5,0,20,21,3.0,0.0,0,450,0,False,3508,
+Tin Bow,Ranger,Pre-Boss,1,26,,7,0.0,0,28,28,2.14,6.6,0,525,0,False,3498,Does not pierce
+Ballista Rod,Summoner,Pre-Boss,1,25,80.0,30,4.7,0,30,30,2.0,1.0,0,50000,3,False,3824,
+Bloodrain Bow,Ranger,Pre-Boss,1,25,70.0,14,3.0,0,19,19,3.16,9.0,0,50000,3,True,4381,Does not pierce
+Copper Shortsword,Melee,Pre-Boss,1,25,70.0,5,4.0,0,13,13,4.62,2.1,0,350,0,False,3507,
+Flameburst Cane,Summoner,Post-Destroyer,9,25,50.0,42,3.0,0,30,30,2.0,1.0,0,250000,5,False,3819,Only two dummies
+Palm Wood Sword,Melee,Pre-Boss,1,25,75.0,8,6.0,0,19,19,3.16,0.0,0,100,0,False,2517,
+Sapphire Staff,Mage,Pre-Boss,1,25,,18,4.0,0,34,34,1.76,7.5,6,10000,1,True,741,Does not pierce
+Sickle,Melee,Pre-Boss,1,25,70.0,9,2.25,0,24,24,2.5,0.0,0,6000,0,True,1786,
+Umbrella,Melee,Pre-Boss,1,25,50.0,10,5.0,0,22,22,2.73,0.0,0,10000,1,False,946,Only 2 Dummies
+Palm Wood Bow,Ranger,Pre-Boss,1,24,,6,0.0,0,29,29,2.07,6.6,0,100,0,False,2515,Does not pierce
+Boreal Wood Bow,Ranger,Pre-Boss,1,22,,6,0.0,0,29,29,2.07,6.6,0,100,0,False,2747,Does not pierce
+Copper Bow,Ranger,Pre-Boss,1,22,,6,0.0,0,29,29,2.07,6.6,0,350,0,False,3504,Does not pierce
+Rich Mahagony Bow,Ranger,Pre-Boss,1,22,,6,0.0,0,29,29,2.07,6.6,0,100,0,False,658,Does not pierce
 Topaz Staff,Mage,Pre-Boss,1,22,,16,3.5,0,36,36,1.67,6.5,5,3000,0,False,740,Does not pierce
-Boreal Wood Sword,Melee,Pre-Boss,1,20,70,8,6,0,20,20,3,0,0,100,0,False,2745,
-Breathing Reed,Melee,Pre-Boss,1,20,60,10,4,0,19,27,3.16,0,0,10000,1,False,186,
-Houndius Shootius,Summoner,Post-Deerclops,5,20,,24,7.5,0,30,30,2,14,0,75000,2,False,5119,Does not pierce
-Lightning Aura Cane,Summoner,Post-Destroyer,9,20,60,11,0.25,0,30,30,2,1,0,250000,5,False,3830,
-Rich Mahogany Sword,Melee,Pre-Boss,1,20,70,8,6,0,19,19,3.16,0,0,100,0,False,656,
-Wooden Bow,Ranger,Pre-Boss,1,20,,4,0,0,30,30,2,6.1,0,100,0,False,39,Does not pierce
-Wooden Sword,Melee,Pre-Boss,1,20,60,7,5,0,20,20,3,0,0,100,0,False,24,
-Wooden Yoyo,Melee,Pre-Boss,1,20,30,9,2.5,0,25,25,2.4,16,0,500,0,False,3278,Only 2 Dummies
-Amethyst Staff,Mage,Pre-Boss,1,18,,15,3.25,0,37,37,1.62,6,5,2000,0,False,739,Does not pierce
-Cactus Sword,Melee,Pre-Boss,1,18,55,10,4.5,0,30,30,2,0,0,1800,0,False,881,
-Explosive Trap Rod,Summoner,Pre-Boss,1,15,45,24,0.5,0,30,30,2,1,0,50000,3,False,3832,
-Hornet Staff,Summoner,Post-QueenBee,4,15,,12,2,0,22,22,2.73,10,0,35000,3,True,2364,Does not pierce
-Imp Staff,Summoner,Post-Brain/Worm,3,15,75,17,2,0,36,36,1.67,10,0,27000,3,True,2365,
-Paper Plane,Ranger,Pre-Boss,1,14,,4,2,0,17,17,3.53,5,0,5000,0,False,4343,Does not pierce
-Finch Staff,Summoner,Pre-Boss,1,10,25,7,4,0,36,36,1.67,10,0,50000,1,True,4281,
-Flameburst Rod,Summoner,Pre-Boss,1,8,18,17,3,0,30,30,2,1,0,50000,3,False,3818,Only two dummies
-Flinx Staff,Summoner,Pre-Boss,1,8,70,8,2,0,36,36,1.67,10,0,25000,3,True,5069,
-Lightning Aura Rod,Summoner,Pre-Boss,1,8,24,4,0.25,0,30,30,2,1,0,50000,3,False,3829,
+Boreal Wood Sword,Melee,Pre-Boss,1,20,70.0,8,6.0,0,20,20,3.0,0.0,0,100,0,False,2745,
+Breathing Reed,Melee,Pre-Boss,1,20,60.0,10,4.0,0,19,27,3.16,0.0,0,10000,1,False,186,
+Houndius Shootius,Summoner,Post-Deerclops,5,20,,24,7.5,0,30,30,2.0,14.0,0,75000,2,False,5119,Does not pierce
+Lightning Aura Cane,Summoner,Post-Destroyer,9,20,60.0,11,0.25,0,30,30,2.0,1.0,0,250000,5,False,3830,
+Rich Mahogany Sword,Melee,Pre-Boss,1,20,70.0,8,6.0,0,19,19,3.16,0.0,0,100,0,False,656,
+Wooden Bow,Ranger,Pre-Boss,1,20,,4,0.0,0,30,30,2.0,6.1,0,100,0,False,39,Does not pierce
+Wooden Sword,Melee,Pre-Boss,1,20,60.0,7,5.0,0,20,20,3.0,0.0,0,100,0,False,24,
+Wooden Yoyo,Melee,Pre-Boss,1,20,30.0,9,2.5,0,25,25,2.4,16.0,0,500,0,False,3278,Only 2 Dummies
+Amethyst Staff,Mage,Pre-Boss,1,18,,15,3.25,0,37,37,1.62,6.0,5,2000,0,False,739,Does not pierce
+Cactus Sword,Melee,Pre-Boss,1,18,55.0,10,4.5,0,30,30,2.0,0.0,0,1800,0,False,881,
+Explosive Trap Rod,Summoner,Pre-Boss,1,15,45.0,24,0.5,0,30,30,2.0,1.0,0,50000,3,False,3832,
+Hornet Staff,Summoner,Post-QueenBee,4,15,,12,2.0,0,22,22,2.73,10.0,0,35000,3,True,2364,Does not pierce
+Imp Staff,Summoner,Post-Brain/Worm,3,15,75.0,17,2.0,0,36,36,1.67,10.0,0,27000,3,True,2365,
+Paper Plane,Ranger,Pre-Boss,1,14,,4,2.0,0,17,17,3.53,5.0,0,5000,0,False,4343,Does not pierce
+Finch Staff,Summoner,Pre-Boss,1,10,25.0,7,4.0,0,36,36,1.67,10.0,0,50000,1,True,4281,
+Flameburst Rod,Summoner,Pre-Boss,1,8,18.0,17,3.0,0,30,30,2.0,1.0,0,50000,3,False,3818,Only two dummies
+Flinx Staff,Summoner,Pre-Boss,1,8,70.0,8,2.0,0,36,36,1.67,10.0,0,25000,3,True,5069,
+Lightning Aura Rod,Summoner,Pre-Boss,1,8,24.0,4,0.25,0,30,30,2.0,1.0,0,50000,3,False,3829,
