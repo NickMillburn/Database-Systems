@@ -209,7 +209,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // ---- Section 4: output ----
-page_header("Log a connection");
+// The third argument is the note shown under the title.
+page_header(
+    "Log a connection",
+    0,
+    "This is my add interface. It adds one row to the connection table. It is non-trivial "
+    . "because I only type what a raw log line would have. The page looks up the device, the "
+    . "service and the organization in the other tables to fill in the three foreign keys "
+    . "before it inserts."
+);
 ?>
 <p class="hint">
     Example: pick jellyfin / ethernet, inbound, cloudflare_tunnel, tcp, local port 8096,

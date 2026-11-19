@@ -65,7 +65,14 @@ $latest = rows(
 
 // ---- Section 5: output ----
 // Everything below prints HTML. The second argument is the auto-reload time (0 = off).
-page_header("Dashboard", $live ? 5 : 0);
+// The third argument is the note shown under the title.
+page_header(
+    "Dashboard",
+    $live ? 5 : 0,
+    "This page shows that my tables are pre-populated. The boxes are live row counts for all "
+    . "five tables. The newest connections list at the bottom joins all five tables together "
+    . "to show names instead of ids."
+);
 ?>
 <?php /* The row of count boxes. One box per entry in $counts. */ ?>
 <div class="cards">

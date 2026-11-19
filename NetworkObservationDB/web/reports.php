@@ -39,6 +39,17 @@ $questions = [
     7 => "Which inbound connections hit a port that isn't registered as a service?",
     8 => "What IP addresses has my laptop had over the past month?",
 ];
+// question number => the tables that question's query joins (shown on the page)
+$tables_used = [
+    1 => "connection, interface, device",
+    2 => "connection, interface",
+    3 => "connection, organization, interface",
+    4 => "connection, service, device",
+    5 => "connection, interface, device (with subqueries)",
+    6 => "connection, interface, device, organization (with a NOT EXISTS subquery)",
+    7 => "connection, interface, device, organization",
+    8 => "connection, interface",
+];
 // question number => how many days back it looks unless the user changes it
 $default_days = [1 => 7, 2 => 30, 3 => 30, 4 => 30, 5 => 30, 6 => 7, 7 => 7, 8 => 30];
 // questions 2 and 8 are about one device; these are the defaults the proposal asked about
@@ -262,7 +273,14 @@ ORDER BY first_seen_local";
 $result = rows($sql, $types, $params);
 
 // ---- Section 5: output ----
-page_header("Reports");
+// The third argument is the note shown under the title.
+page_header(
+    "Reports",
+    0,
+    "This is my query interface. It displays information retrieved from the database. "
+    . "It is non-trivial because every one of these eight questions joins at least two tables, "
+    . "and some join four. The tables each question uses are listed under it."
+);
 ?>
 <?php /* The numbered list of questions. Each is a link back to this page with ?r=N. */ ?>
 <ol class="questions">
@@ -274,6 +292,7 @@ page_header("Reports");
 <?php /* The chosen question and its input form. method="get" puts the inputs in the URL,
    so a report can be bookmarked or reloaded. The hidden field keeps the question number. */ ?>
 <h2><?php echo $r . ". " . h($questions[$r]); ?></h2>
+<p class="hint">Tables this question joins: <?php echo h($tables_used[$r]); ?></p>
 <form class="inline panel" method="get" action="reports.php">
     <input type="hidden" name="r" value="<?php echo $r; ?>">
     <label>Look back (days)

@@ -14,7 +14,8 @@
  *   local_time()   SQL snippet that converts stored UTC time to local time
  *   h()            escapes text so it is safe to put in HTML
  *   human_bytes()  turns 1536 into "1.5 KB"
- *   page_header()  prints the top of the page and the navigation bar
+ *   page_header()  prints the top of the page, the navigation bar, and the note
+ *                  saying how the page meets the assignment requirements
  *   page_footer()  prints the closing tags
  *   show_table()   prints query results as an HTML table
  *   options()      builds the <option> tags for a dropdown
@@ -121,7 +122,9 @@ function human_bytes($n)
 // ---- Section 4: page layout (top and bottom of every page) ----
 //
 // $refresh > 0 makes the browser reload the page every that many seconds.
-function page_header($title, $refresh = 0)
+// $about is the short note shown under the title that says how the page meets
+// the assignment requirements. Leave it out and no note is shown.
+function page_header($title, $refresh = 0, $about = "")
 {
     // the navigation bar: file name => link text
     $pages = [
@@ -149,6 +152,10 @@ function page_header($title, $refresh = 0)
     }
     echo "<a href=\"/phpmyadmin/\" target=\"_blank\">phpMyAdmin</a>";
     echo "</nav></header>\n<main>\n<h1>" . h($title) . "</h1>\n";
+    // the blue note under the title: how this page meets the assignment requirements
+    if ($about !== "") {
+        echo "<p class=\"about\"><b>How this page meets the requirements:</b> " . h($about) . "</p>\n";
+    }
 }
 
 function page_footer()

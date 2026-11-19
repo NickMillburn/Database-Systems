@@ -121,7 +121,14 @@ LIMIT 200";
 $result = rows($sql, $types, $params);
 
 // ---- Section 5: output ----
-page_header("Connections");
+// The third argument is the note shown under the title.
+page_header(
+    "Connections",
+    0,
+    "This is the log behind the reports. Every row here joins all five tables, so it shows "
+    . "the device, organization and service by name instead of by id. The reports link here "
+    . "so I can see the individual connections behind a summary."
+);
 ?>
 <?php /* The filter form. method="get" puts the filters in the URL, which is what lets
    the Reports page link straight to a filtered view. Each field is pre-filled

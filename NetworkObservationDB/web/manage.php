@@ -203,7 +203,15 @@ $service_list = rows(
 $org_list = rows("SELECT org_id AS id, org_name AS organization, country, asn FROM organization ORDER BY org_name");
 
 // ---- Section 5: output ----
-page_header("Manage");
+// The third argument is the note shown under the title.
+page_header(
+    "Manage",
+    0,
+    "This is my add and modify interface. The non-trivial one is Register a service. It "
+    . "inserts into the service table and then updates older rows in the connection table to "
+    . "link to it, all in one transaction. Register a device also inserts into two tables in "
+    . "one transaction."
+);
 ?>
 <?php /* Message area: red box for an error, green box for success. */ ?>
 <?php if ($error): ?>
