@@ -1,0 +1,29 @@
+# systemd unit for the traffic simulator. deploy/install.sh copies this to
+# /etc/systemd/system/ and copies simulator/netsim.py to /opt/netobs/.
+#
+#   systemctl status netobs-sim      is it running
+#   journalctl -u netobs-sim -f      watch the connections it adds
+#   sudo systemctl stop netobs-sim   pause it (start to resume; it fills the gap)
+
+[Unit]
+Description=Network Observation Database traffic simulator
+# start after the database; whichever of the two names exists on this machine
+After=network.target mariadb.service mysql.service
+
+[Service]
+Type=simple
+# -u = unbuffered output, so log lines reach journalctl right away
+ExecStart=/usr/bin/python3 -u /opt/netobs/netsim.py run
+# Database login. Change these if web/config.php changes.
+Environment=NETOBS_DB_USER=jetson
+Environment=NETOBS_DB_PASS=orin
+Environment=NETOBS_DB_NAME=netobs
+# If it exits for any reason (database restarting, etc.) start it again after 10 seconds.
+Restart=always
+RestartSec=10
+# Run as a throwaway unprivileged user instead of root.
+DynamicUser=yes
+
+[Install]
+# start on every boot
+WantedBy=multi-user.target
