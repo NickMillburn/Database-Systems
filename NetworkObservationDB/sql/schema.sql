@@ -1,15 +1,43 @@
--- Network Observation Database - schema for MySQL / MariaDB
+-- ============================================================================
+-- schema.sql
+--
+-- WHAT THIS FILE DOES
+-- Creates the netobs database and its five empty tables. This is the step that
+-- turns the schema from the design deliverable into a real database.
+-- Run it with:  mysql < sql/schema.sql   (deploy/install.sh does this)
+--
+-- HOW THE ER DESIGN BECAME TABLES
+--   Each entity became a table and each attribute became a column.
+--   Each 1:N relationship became a foreign key column on the "many" side:
+--     HAS        device 1:N interface         interface.device_id
+--     RUNS       device 1:N service           service.device_id
+--     CONNECTS   interface 1:N connection     connection.mac_address
+--     BELONGS TO organization 1:N connection  connection.org_id          (optional)
+--     TARGETS    service 1:N connection       connection.svc_* (3 cols)  (optional)
+--   A required relationship is a NOT NULL foreign key. An optional one allows NULL.
+--
+-- ORDER MATTERS
+--   A foreign key can only point at a table that already exists, so parents are
+--   created before children: device, interface, service, organization, connection.
+--   Dropping goes the other way round.
+--
+-- CHANGES FROM THE DELIVERABLE
 -- Same five tables as the UML + schema deliverable, with the PostgreSQL types
 -- swapped for MySQL ones:
 --   MACADDR     -> CHAR(17)      'aa:bb:cc:dd:ee:ff'
 --   INET        -> VARCHAR(45)   long enough for IPv6 text
 --   TIMESTAMPTZ -> DATETIME      always stored in UTC
+--   VARCHAR     -> ENUM          for direction and access_path, so only listed values are accepted
 --
 -- Running this file DROPS and recreates the tables.
+-- ============================================================================
 
+-- ---- Section 1: the database itself ----
+-- USE makes every statement below apply to netobs.
 CREATE DATABASE IF NOT EXISTS netobs;
 USE netobs;
 
+-- ---- Section 2: remove old copies of the tables ----
 -- children first so the foreign keys do not block the drops
 DROP TABLE IF EXISTS connection;
 DROP TABLE IF EXISTS service;
@@ -17,9 +45,14 @@ DROP TABLE IF EXISTS interface;
 DROP TABLE IF EXISTS organization;
 DROP TABLE IF EXISTS device;
 
+-- ---- Section 3: the tables, parents first ----
+-- ENGINE=InnoDB is the MySQL storage engine that enforces foreign keys and supports transactions.
+--
 -- A machine on the network.
 CREATE TABLE device (
+    -- surrogate key: MySQL hands out 1, 2, 3 ... on its own
     device_id     INT AUTO_INCREMENT PRIMARY KEY,
+    -- UNIQUE: no two devices may share a name
     name          VARCHAR(60) NOT NULL UNIQUE,
     device_type   VARCHAR(20) NOT NULL,      -- desktop, laptop, phone, server, unknown, ...
     owner         VARCHAR(40),
@@ -28,9 +61,11 @@ CREATE TABLE device (
 
 -- One way a device connects (Ethernet, Wi-Fi, Tailscale). HAS: device 1 : N interface.
 CREATE TABLE interface (
+    -- natural key: a MAC address is already unique, so no id column is needed
     mac_address CHAR(17) PRIMARY KEY,
     device_id   INT NOT NULL,
     if_type     VARCHAR(20) NOT NULL,        -- ethernet, wifi, tailscale
+    -- HAS: every interface must belong to an existing device
     FOREIGN KEY (device_id) REFERENCES device(device_id)
 ) ENGINE=InnoDB;
 
@@ -41,7 +76,9 @@ CREATE TABLE service (
     port         INT NOT NULL,
     protocol     VARCHAR(4) NOT NULL,        -- tcp or udp
     service_name VARCHAR(60) NOT NULL,
+    -- composite primary key: the three columns together identify one service
     PRIMARY KEY (device_id, port, protocol),
+    -- RUNS: every service must belong to an existing device
     FOREIGN KEY (device_id) REFERENCES device(device_id)
 ) ENGINE=InnoDB;
 
@@ -78,8 +115,11 @@ CREATE TABLE connection (
     direction      ENUM('inbound', 'outbound', 'internal') NOT NULL,
     access_path    ENUM('lan', 'internet', 'tailscale', 'cloudflare_tunnel', 'port_forward') NOT NULL,
     source         VARCHAR(20) NOT NULL,     -- generator, simulator, manual
+    -- CONNECTS: required (mac_address is NOT NULL above)
     FOREIGN KEY (mac_address) REFERENCES interface(mac_address),
+    -- BELONGS TO: optional (org_id may be NULL)
     FOREIGN KEY (org_id) REFERENCES organization(org_id),
+    -- TARGETS: optional, and three columns wide because it points at service's three-column key
     FOREIGN KEY (svc_device_id, svc_port, svc_protocol)
         REFERENCES service(device_id, port, protocol),
     -- the reports filter by time, so index it on its own and together with the interface

@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
+# install.sh
+#
+# WHAT THIS FILE DOES
 # Sets the project up on an Ubuntu machine: this laptop or the Jetson.
+# It is the scripted version of "configure a LAMP server and load the database":
+#   1. install missing packages (Apache, PHP, MySQL driver, MariaDB if no database)
+#   2. start the database server
+#   3. create the netobs database and the jetson login
+#   4. load sql/schema.sql and sql/seed.sql (creates and fills the reference tables)
+#   5. run the simulator once to fill the connection table
+#   6. copy web/ to /var/www/html/netobs so Apache serves it
+#   7. install phpMyAdmin
+#   8. install and start the simulator as a service
+#
 #
 #   sudo bash deploy/install.sh            full LAMP setup + simulator service
 #   sudo bash deploy/install.sh --dev      database only (use deploy/run_dev.sh for the pages)
@@ -10,8 +23,10 @@
 #
 # If the database root account needs a password:
 #   sudo DB_ROOT_PASS=yourpassword bash deploy/install.sh
+# stop at the first command that fails, instead of carrying on with a half-finished setup
 set -euo pipefail
 
+# names used throughout the script
 DB_NAME=netobs
 DB_USER=jetson
 DB_PASS=orin
@@ -19,6 +34,7 @@ WEB_DIR=/var/www/html/netobs
 SIM_DIR=/opt/netobs
 UNIT=netobs-sim.service
 
+# read the command-line options
 DEV=0
 RESET=0
 for arg in "$@"; do
@@ -29,14 +45,17 @@ for arg in "$@"; do
     esac
 done
 
+# installing packages and writing to /var/www needs root
 if [[ $EUID -ne 0 ]]; then
     echo "Run this with sudo."
     exit 1
 fi
 
+# the project folder = one level up from where this script lives, wherever it was cloned
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 export DEBIAN_FRONTEND=noninteractive
 
+# two small helpers: print a heading, and ask dpkg whether a package is installed
 step() { echo; echo "== $1"; }
 installed() { dpkg-query -W -f='${Status}' "$1" 2>/dev/null | grep -q "install ok installed"; }
 
@@ -99,6 +118,7 @@ if ! mysql -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" -e "SELECT 1" >/dev/null 2>&1; t
     exit 1
 fi
 
+# only load the schema when the tables are missing (or --reset was given), so a rerun keeps the data
 HAS_TABLES=$("${ROOT_SQL[@]}" -N -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='$DB_NAME' AND table_name='connection'")
 if [[ $RESET -eq 1 || "$HAS_TABLES" == "0" ]]; then
     echo "Loading sql/schema.sql and sql/seed.sql"
@@ -121,7 +141,10 @@ fi
 # ---------------------------------------------------------------- web pages
 step "Web pages -> $WEB_DIR"
 mkdir -p "$WEB_DIR"
+# Apache serves files from /var/www/html, so the pages are copied there
 cp -r "$PROJECT_DIR/web/." "$WEB_DIR/"
+# Apache runs as www-data, so the copies must be readable by everyone
+chmod -R a+rX "$WEB_DIR"
 systemctl enable --now apache2
 
 # ---------------------------------------------------------------- phpMyAdmin
@@ -144,6 +167,8 @@ systemctl reload apache2
 
 # ---------------------------------------------------------------- simulator service
 step "Simulator service ($UNIT)"
+# copy the simulator and its unit file into place, then tell systemd to load it,
+# start it on every boot (enable) and start it now (restart)
 install -D -m 644 "$PROJECT_DIR/simulator/netsim.py" "$SIM_DIR/netsim.py"
 install -m 644 "$PROJECT_DIR/deploy/$UNIT" "/etc/systemd/system/$UNIT"
 systemctl daemon-reload

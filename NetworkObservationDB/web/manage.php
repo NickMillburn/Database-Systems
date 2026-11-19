@@ -1,26 +1,56 @@
 <?php
-// Add / modify interface #2: the device registry, service catalog and organizations.
-// Each form posts back to this page with a hidden "action" field.
-//   add_device    INSERT device + its first interface, in one transaction
-//   add_interface INSERT one more interface for an existing device
-//   add_service   INSERT service, then UPDATE older connections that hit that port so they link to it
-//   add_org       INSERT organization
-//   label_ip      UPDATE every connection to one remote IP so it points at an organization
+/*
+ * manage.php  (the ADD / MODIFY interface for the reference tables)
+ *
+ * WHAT THIS FILE DOES
+ * Maintains the device, interface, service and organization tables, and can
+ * modify existing connection rows. The page has five small forms and then lists
+ * what is currently in those tables.
+ *
+ * HOW FIVE FORMS SHARE ONE FILE
+ * Every form posts back to this page and carries a hidden field named "action".
+ * The PHP at the top reads $_POST["action"] and runs the matching branch:
+ *   add_device     INSERT a device and its first interface (transaction, 2 tables)
+ *   add_interface  INSERT one more interface for an existing device
+ *   add_service    INSERT a service, then UPDATE older connections that hit that
+ *                  port so they link to it (transaction, 3 tables)
+ *   add_org        INSERT an organization
+ *   label_ip       UPDATE every connection to one remote IP to point at an organization
+ *
+ * WHICH PARTS ARE NON-TRIVIAL
+ * add_service is the one to show. It changes two tables and reads a third in a
+ * single transaction. add_device also uses a transaction across two tables.
+ * add_interface and add_org are plain single-table inserts.
+ *
+ * WHAT A TRANSACTION IS DOING HERE
+ * begin_transaction() starts a group of statements. commit() makes them all
+ * permanent. rollback() undoes all of them. So if the second statement fails,
+ * the first one is undone too and the tables never end up half-updated.
+ */
+
 require_once __DIR__ . "/db.php";
 
+// ---- Section 1: variables for this request ----
+// $action is empty on a normal page visit, so none of the branches below run.
 $message = "";
 $error = "";
 $action = $_POST["action"] ?? "";
 
+// ---- Section 2: helper for checking MAC addresses ----
 // "AA-BB-CC-DD-EE-FF" or "aa:bb:..." -> "aa:bb:cc:dd:ee:ff", or "" if it is not a MAC address
 function clean_mac($text)
 {
     $mac = strtolower(str_replace("-", ":", trim($text)));
+    // the pattern means: five groups of two hex digits and a colon, then two more hex digits
     return preg_match('/^([0-9a-f]{2}:){5}[0-9a-f]{2}$/', $mac) ? $mac : "";
 }
 
+// ---- Section 3: handle whichever form was submitted ----
+// The whole block is inside try so that any database error (duplicate key,
+// broken foreign key) lands in the catch at the bottom and is shown as a message.
 try {
     if ($action == "add_device") {
+        // ---- form 1: register a device and its first interface ----
         $name = trim($_POST["name"] ?? "");
         $type = trim($_POST["device_type"] ?? "");
         $owner = trim($_POST["owner"] ?? "");
@@ -40,6 +70,7 @@ try {
                     "sss",
                     [$name, $type, $owner]
                 );
+                // the id MySQL just gave the new device, needed as the interface's foreign key
                 $device_id = db()->insert_id;
                 run(
                     "INSERT INTO interface (mac_address, device_id, if_type) VALUES (?, ?, ?)",
@@ -54,6 +85,7 @@ try {
             }
         }
     } elseif ($action == "add_interface") {
+        // ---- form 2: add another interface to an existing device ----
         $mac = clean_mac($_POST["mac_address"] ?? "");
         if ($mac === "") {
             $error = "MAC address must look like aa:bb:cc:dd:ee:ff.";
@@ -66,6 +98,7 @@ try {
             $message = "Added interface $mac.";
         }
     } elseif ($action == "add_service") {
+        // ---- form 3: register a service and link older connections to it ----
         $device_id = (int) $_POST["device_id"];
         $port = (int) $_POST["port"];
         $protocol = $_POST["protocol"] ?? "";
@@ -102,6 +135,8 @@ try {
             }
         }
     } elseif ($action == "add_org") {
+        // ---- form 4: add an organization ----
+        // NULLIF(?, '') stores NULL when the field was left blank.
         $name = trim($_POST["org_name"] ?? "");
         $country = strtoupper(trim($_POST["country"] ?? ""));
         $asn = trim($_POST["asn"] ?? "");
@@ -116,6 +151,7 @@ try {
             $message = "Added organization $name.";
         }
     } elseif ($action == "label_ip") {
+        // ---- form 5: set the organization for one outside IP address ----
         $ip = trim($_POST["remote_ip"] ?? "");
         $org_id = (int) $_POST["org_id"];
         if (!filter_var($ip, FILTER_VALIDATE_IP)) {
@@ -134,6 +170,8 @@ try {
     $error = "Database refused the change: " . $e->getMessage();
 }
 
+// ---- Section 4: read the current contents for the page ----
+// This runs after the form handling, so anything just added already shows up.
 // lists for the dropdowns and the tables at the bottom
 $devices = [];
 foreach (rows("SELECT device_id, name FROM device ORDER BY name") as $d) {
@@ -146,6 +184,8 @@ foreach (rows("SELECT org_id, org_name FROM organization ORDER BY org_name") as 
 $if_types = ["ethernet" => "ethernet", "wifi" => "wifi", "tailscale" => "tailscale"];
 $protocols = ["tcp" => "tcp", "udp" => "udp"];
 
+// device LEFT JOIN interface, so a device with no interfaces still appears.
+// GROUP_CONCAT squeezes all of a device's interfaces into one text column.
 $device_list = rows(
     "SELECT d.device_id AS id, d.name, d.device_type AS type, d.owner, d.registered_on,
             COUNT(i.mac_address) AS interfaces,
@@ -162,8 +202,10 @@ $service_list = rows(
 );
 $org_list = rows("SELECT org_id AS id, org_name AS organization, country, asn FROM organization ORDER BY org_name");
 
+// ---- Section 5: output ----
 page_header("Manage");
 ?>
+<?php /* Message area: red box for an error, green box for success. */ ?>
 <?php if ($error): ?>
     <p class="error"><?php echo h($error); ?></p>
 <?php endif; ?>
@@ -171,6 +213,8 @@ page_header("Manage");
     <p class="ok"><?php echo h($message); ?></p>
 <?php endif; ?>
 
+<?php /* The five forms. Each has a hidden "action" field that tells section 3 which
+   branch to run. method="post" because they change data. */ ?>
 <h2>Register a device and its first interface</h2>
 <form class="inline panel" method="post" action="manage.php">
     <input type="hidden" name="action" value="add_device">
@@ -220,6 +264,7 @@ page_header("Manage");
     <button type="submit">Label address</button>
 </form>
 
+<?php /* The current contents of the reference tables. "view" opens that device's or organization's connections. */ ?>
 <h2>Devices</h2>
 <?php show_table($device_list, function ($row) {
     return "connections.php?days=30&device_id=" . $row["id"];

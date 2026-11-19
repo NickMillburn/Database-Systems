@@ -38,6 +38,12 @@ from datetime import datetime, timedelta, timezone
 
 import pymysql
 
+# ==========================================================================
+# Section 1: settings
+# os.environ.get(NAME, default) reads an environment variable, or uses the
+# default when it is not set. The systemd service sets these (see
+# deploy/netobs-sim.service). Run by hand, the defaults are used.
+# ==========================================================================
 DB_HOST = os.environ.get("NETOBS_DB_HOST", "localhost")
 DB_USER = os.environ.get("NETOBS_DB_USER", "jetson")
 DB_PASS = os.environ.get("NETOBS_DB_PASS", "orin")
@@ -46,12 +52,14 @@ DB_SOCKET = os.environ.get("NETOBS_DB_SOCKET", "/var/run/mysqld/mysqld.sock")
 # Times are stored in UTC. This offset is only used to decide what "evening" is.
 UTC_OFFSET_HOURS = float(os.environ.get("NETOBS_UTC_OFFSET", "-6"))
 
+# knobs for how much traffic gets generated
 HISTORY_DAYS = 30        # how far back an empty database gets filled
 RATE_SCALE = 2.0         # multiplies every flow's rate; about 1,100 connections a day at 2.0
 RARE_NEW_ORG = 0.002     # chance an outbound connection goes to an org outside the device's usual list
 EPOCH = datetime(1970, 1, 1)
 
 # --------------------------------------------------------------------------
+# Section 2: the fake world (addresses and activity levels)
 # The fake world. Device and organization names must match sql/seed.sql.
 # --------------------------------------------------------------------------
 
@@ -111,6 +119,11 @@ SCANNER_ORGS = ["China Telecom", "DigitalOcean", "OVH", "Hetzner", "Alibaba Clou
 UNLISTED_IPS = ["193.32.162.77", "45.148.10.212", "185.224.128.43"]
 
 
+# ==========================================================================
+# Section 3: traffic styles
+# A style decides what one connection of a given kind looks like: which port,
+# tcp or udp, how many bytes each way, and how long it lasted.
+# ==========================================================================
 def lognorm(median, sigma):
     """Random size around `median`. Bigger sigma = more spread."""
     return int(random.lognormvariate(math.log(median), sigma))
@@ -147,6 +160,11 @@ STYLES = {
     "scan": lambda: (None, None, random.randint(0, 200), random.randint(60, 400), random.uniform(0, 3)),
 }
 
+# ==========================================================================
+# Section 4: traffic patterns (who talks to whom, and how often)
+# Three lists, one per direction. Every entry is one repeating behaviour.
+# These lists are the only place to edit to change what traffic appears.
+# ==========================================================================
 # Outbound: one of my devices talks to the internet.
 # (device, interface type, connections per hour, hourly profile, style, {organization: weight})
 OUTBOUND = [
@@ -216,6 +234,9 @@ INBOUND = [
 ]
 
 
+# ==========================================================================
+# Section 5: small helpers
+# ==========================================================================
 def log(msg):
     print(msg, flush=True)
 
@@ -254,20 +275,29 @@ def device_ip(device, if_type, ts):
     return lan_ip(device, ts)
 
 
+# ==========================================================================
+# Section 6: reading the reference tables
+# The patterns above use names ("nick-phone", "Google"). The connection table
+# needs ids and MAC addresses. World loads the lookup tables that translate.
+# ==========================================================================
 class World:
     """The reference tables, read from the database so ids and MACs always match it."""
 
     def __init__(self, conn):
         with conn.cursor() as cur:
+            # device name -> device_id
             cur.execute("SELECT device_id, name FROM device")
             self.device_id = {name: dev_id for dev_id, name in cur.fetchall()}
+            # (device name, interface type) -> MAC address
             cur.execute("SELECT i.mac_address, d.name, i.if_type FROM interface i "
                         "JOIN device d ON d.device_id = i.device_id ORDER BY i.mac_address")
             self.mac = {}
             for mac, name, if_type in cur.fetchall():
                 self.mac.setdefault((name, if_type), mac)
+            # the set of registered services, as (device_id, port, protocol) keys
             cur.execute("SELECT device_id, port, protocol FROM service")
             self.services = set(cur.fetchall())
+            # organization name -> org_id
             cur.execute("SELECT org_id, org_name FROM organization")
             self.org_id = {name: org_id for org_id, name in cur.fetchall()}
 
@@ -277,6 +307,15 @@ class World:
         return key if key in self.services else (None, None, None)
 
 
+# ==========================================================================
+# Section 7: building one connection row
+# Returns a tuple of 17 values in the same order as the columns in INSERT_SQL
+# (section 9). The three branches differ in which end is "local", and in
+# which foreign keys get filled:
+#   outbound  organization set, service NULL
+#   internal  organization NULL, service set if the target port is registered
+#   inbound   organization set if known, service set if the port is registered
+# ==========================================================================
 def build_row(world, kind, flow, end, source):
     """Turn one flow into one `connection` row ending at time `end`."""
     if kind == "outbound":
@@ -320,6 +359,9 @@ def build_row(world, kind, flow, end, source):
         start, end, sent, received, "inbound", path, source)
 
 
+# ==========================================================================
+# Section 8: generating every connection in a time range
+# ==========================================================================
 def usable_flows(world):
     """Every (kind, flow) whose devices and interfaces exist in the database."""
     flows = []
@@ -348,9 +390,11 @@ def generate(world, t0, t1, source, speed=1.0):
         for kind, flow in flows:
             per_hour = flow[6] if kind == "internal" else flow[2] if kind == "outbound" else flow[5]
             profile = flow[7] if kind == "internal" else flow[3] if kind == "outbound" else flow[6]
+            # expected connections per hour for this pattern at this time of day
             rate = per_hour * profile[local.hour] * RATE_SCALE * speed
             if weekend and profile in PEOPLE_PROFILES:
                 rate *= 1.3
+            # draw how many actually happened in this slice, then give each a random end time inside it
             for _ in range(poisson(rate * span / 3600.0)):
                 end = bucket + timedelta(seconds=random.uniform(0, span))
                 rows.append(build_row(world, kind, flow, end.replace(microsecond=0), source))
@@ -379,6 +423,11 @@ def planted_oddities(world, now):
     return rows
 
 
+# ==========================================================================
+# Section 9: writing to the database
+# %s is PyMySQL's placeholder, the same idea as ? in the PHP pages: the values
+# are sent separately from the SQL text.
+# ==========================================================================
 INSERT_SQL = (
     "INSERT INTO connection (mac_address, org_id, svc_device_id, svc_port, svc_protocol, "
     "local_ip, local_port, remote_ip, remote_port, protocol, started_at, ended_at, "
@@ -390,6 +439,7 @@ INSERT_SQL = (
 def insert(conn, rows):
     with conn.cursor() as cur:
         for i in range(0, len(rows), 2000):
+            # insert in batches of 2000 rows, which is much faster than one at a time
             cur.executemany(INSERT_SQL, rows[i:i + 2000])
     conn.commit()
 
@@ -401,6 +451,12 @@ def connect():
     return pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASS, database=DB_NAME)
 
 
+# ==========================================================================
+# Section 10: seed / catch up
+# This is what pre-populates the connection table. On an empty database it
+# generates the last 30 days. Otherwise it generates only the gap since the
+# newest generated row, so stopping and starting never leaves a hole.
+# ==========================================================================
 def catch_up(conn, world):
     """Fill the gap between the newest generated row and now. Returns the time it filled up to."""
     now = utcnow().replace(microsecond=0)
@@ -427,9 +483,15 @@ def describe(world, row):
         row[14], row[15], names.get(row[0], row[0]), row[5], row[6], row[7], row[8], row[9])
 
 
+# ==========================================================================
+# Section 11: live mode (what the systemd service runs)
+# catch_up() once, then loop forever: sleep a few seconds, generate the
+# connections for the seconds that just passed, insert them.
+# ==========================================================================
 def run(speed, tick):
     """Catch up, then add live connections forever. Reconnects if the database goes away."""
     stopping = []
+    # systemctl stop sends SIGTERM. Catching it lets the loop finish cleanly instead of being cut off.
     signal.signal(signal.SIGTERM, lambda *_: stopping.append(True))
     signal.signal(signal.SIGINT, lambda *_: stopping.append(True))
     while not stopping:
@@ -460,6 +522,10 @@ def run(speed, tick):
     log("stopped")
 
 
+# ==========================================================================
+# Section 12: command line
+# argparse turns "netsim.py seed" or "netsim.py run --speed 20" into args.
+# ==========================================================================
 def main():
     parser = argparse.ArgumentParser(description="Fake traffic for the Network Observation Database")
     sub = parser.add_subparsers(dest="command")

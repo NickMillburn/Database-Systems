@@ -1,3 +1,12 @@
+/* style.css
+
+   WHAT THIS FILE DOES
+   The look of every page. page_header() in db.php links it from each page's
+   <head>. It contains no logic. Each rule is: which elements { how they look }.
+   The class names used here (panel, cards, ok, error, hint ...) are the
+   class="..." attributes in the PHP files' HTML. */
+
+/* Page basics: fonts, background, the dark top bar and its links */
 * { box-sizing: border-box; }
 body { font-family: system-ui, sans-serif; font-size: 15px; margin: 0; color: #1c2430; background: #f4f6f8; }
 header { background: #1c2430; color: #fff; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; }
@@ -9,6 +18,7 @@ h1 { font-size: 22px; margin: 18px 0 14px; }
 h2 { font-size: 16px; margin: 26px 0 8px; }
 a { color: #0b63c5; }
 
+/* Result tables (printed by show_table in db.php) */
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; background: #fff; width: 100%; }
 th, td { padding: 6px 10px; border-bottom: 1px solid #e3e7ec; text-align: left; white-space: nowrap; }
@@ -17,11 +27,13 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
 td.null { color: #9aa5b1; font-style: italic; }
 tr:hover td { background: #f7fafd; }
 
+/* Dashboard: the row of count boxes */
 .cards { display: flex; flex-wrap: wrap; gap: 12px; }
 .card { background: #fff; border: 1px solid #e3e7ec; border-radius: 6px; padding: 10px 16px; min-width: 130px; }
 .card b { display: block; font-size: 22px; }
 .card span { color: #5b6876; font-size: 13px; }
 
+/* Forms: the white boxes, the grid and inline layouts, inputs and buttons */
 form.panel, .panel { background: #fff; border: 1px solid #e3e7ec; border-radius: 6px; padding: 14px 16px; margin-bottom: 14px; }
 form.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px 16px; align-items: end; }
 form.inline { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; }
@@ -31,11 +43,14 @@ form.inline input, form.inline select { width: auto; min-width: 110px; }
 button { padding: 7px 16px; font: inherit; color: #fff; background: #0b63c5; border: 0; border-radius: 4px; cursor: pointer; }
 button:hover { background: #094f9e; }
 
+/* Messages: green success box, red error box, grey hint text */
 .ok, .error { padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
 .ok { background: #e3f6e8; border: 1px solid #9fd8ae; }
 .error { background: #fde8e8; border: 1px solid #f0a8a8; }
 .empty, .hint { color: #5b6876; }
 .hint { font-size: 13px; margin: 4px 0 10px; }
+
+/* Reports page: the question list and the Show SQL box */
 ol.questions { background: #fff; border: 1px solid #e3e7ec; border-radius: 6px; padding: 12px 16px 12px 36px; margin: 0; }
 ol.questions li { margin: 5px 0; }
 ol.questions li.here a { font-weight: 600; color: #1c2430; text-decoration: none; }

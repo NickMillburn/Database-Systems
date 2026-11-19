@@ -1,17 +1,38 @@
 <?php
-// Dashboard: how much is in each table, what the last 24 hours looked like,
-// and the newest connections. Add ?live=1 to reload every 5 seconds and watch
-// the simulator's rows arrive.
+/*
+ * index.php  (the Dashboard page)
+ *
+ * WHAT THIS FILE DOES
+ * The landing page. It is read-only and shows three things:
+ *   1. how many rows are in each of the five tables
+ *   2. a summary of the last 24 hours, grouped by direction and access path
+ *   3. the 15 newest connections
+ * Adding ?live=1 to the address makes the page reload every 5 seconds, which is
+ * how to watch the simulator's rows arrive.
+ *
+ * HOW IT IS LAID OUT (every page follows this same pattern)
+ *   top half:    PHP that runs the queries and stores the results in variables
+ *   bottom half: HTML that prints those variables
+ */
+
+// Load the shared functions (db connection, rows(), show_table(), page_header() ...).
 require_once __DIR__ . "/db.php";
 
+// ---- Section 1: read the address bar ----
+// $_GET holds whatever comes after the ? in the URL. isset() is true if "live" is there.
 $live = isset($_GET["live"]);
 
+// ---- Section 2: query 1, row counts ----
 // One count per table. The table names are fixed here, not user input.
 $counts = [];
 foreach (["device", "interface", "service", "organization", "connection"] as $table) {
+    // rows() returns a list of rows. [0] is the first row and ["n"] is its COUNT(*) column.
     $counts[$table] = rows("SELECT COUNT(*) AS n FROM $table")[0]["n"];
 }
 
+// ---- Section 3: query 2, last 24 hours ----
+// One table (connection). GROUP BY makes one output row per direction + access path pair.
+// UTC_TIMESTAMP() is used instead of NOW() because the stored times are UTC.
 $last_day = rows(
     "SELECT direction, access_path, COUNT(*) AS connections,
             SUM(bytes_sent) AS bytes_sent, SUM(bytes_received) AS bytes_received
@@ -21,6 +42,9 @@ $last_day = rows(
      ORDER BY connections DESC"
 );
 
+// ---- Section 4: query 3, the 15 newest connections ----
+// Joins all five tables: connection -> interface -> device gives the device name,
+// connection -> organization gives the org name, connection -> service gives the service name.
 // LEFT JOINs because a connection may have no organization and no matched service.
 $latest = rows(
     "SELECT c.connection_id AS id, " . local_time("c.ended_at") . " AS ended_local,
@@ -39,14 +63,19 @@ $latest = rows(
      LIMIT 15"
 );
 
+// ---- Section 5: output ----
+// Everything below prints HTML. The second argument is the auto-reload time (0 = off).
 page_header("Dashboard", $live ? 5 : 0);
 ?>
+<?php /* The row of count boxes. One box per entry in $counts. */ ?>
 <div class="cards">
 <?php foreach ($counts as $table => $n): ?>
     <div class="card"><b><?php echo number_format($n); ?></b><span><?php echo $table; ?> rows</span></div>
 <?php endforeach; ?>
 </div>
 
+<?php /* The 24-hour summary table. The function passed to show_table builds each row's
+   "view" link, which opens connections.php filtered to that direction and path. */ ?>
 <h2>Last 24 hours by direction and access path</h2>
 <?php
 show_table($last_day, function ($row) {
@@ -55,6 +84,7 @@ show_table($last_day, function ($row) {
 });
 ?>
 
+<?php /* The newest-connections table, with the link that turns live reload on or off. */ ?>
 <h2>Newest connections</h2>
 <p class="hint">
 <?php if ($live): ?>

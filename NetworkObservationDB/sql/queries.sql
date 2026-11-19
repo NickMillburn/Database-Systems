@@ -1,3 +1,19 @@
+-- ============================================================================
+-- queries.sql
+--
+-- WHAT THIS FILE DOES
+-- Nothing on its own. It is not used by the web pages or the install. It is a
+-- reference copy of the eight report queries so they can be read in one place
+-- and pasted into the SQL tab in phpMyAdmin.
+-- Run them all with:  mysql -ujetson -porin -t < sql/queries.sql
+--
+-- Table aliases: c = connection, i = interface, d = device, o = organization,
+-- s = service. Almost every query starts with the same chain,
+--   connection -> interface -> device
+-- because a connection only stores a MAC address, and the device name is two
+-- joins away.
+-- ============================================================================
+--
 -- The eight questions from the proposal as plain SQL.
 -- These are the same queries the Reports page runs (web/reports.php), with the
 -- page's inputs filled in, so they can be pasted into phpMyAdmin's SQL tab.
@@ -6,6 +22,7 @@
 USE netobs;
 
 -- 1. Which device made the most outbound connections this week?
+-- Tables: connection, interface, device. GROUP BY device, COUNT the rows, biggest first.
 SELECT d.name, COUNT(*) AS connections, SUM(c.bytes_sent) AS bytes_sent
 FROM connection c
 JOIN interface i ON i.mac_address = c.mac_address
@@ -17,6 +34,7 @@ ORDER BY connections DESC;
 
 -- 2. How much data did the media server send outside the house last month,
 --    split by Cloudflare Tunnel vs. Tailscale?
+-- Tables: connection, interface, device. Inbound rows for one device, grouped by path.
 SELECT c.access_path, COUNT(*) AS connections, SUM(c.bytes_sent) AS bytes_sent
 FROM connection c
 JOIN interface i ON i.mac_address = c.mac_address
@@ -28,6 +46,7 @@ GROUP BY c.access_path
 ORDER BY bytes_sent DESC;
 
 -- 3. What are the top 10 outside organizations my devices talk to?
+-- Tables: connection, organization, interface. COUNT(DISTINCT ...) counts different devices.
 SELECT o.org_name, o.country, COUNT(*) AS connections,
        COUNT(DISTINCT i.device_id) AS devices,
        SUM(c.bytes_sent + c.bytes_received) AS total_bytes
@@ -41,6 +60,7 @@ ORDER BY connections DESC
 LIMIT 10;
 
 -- 4. Which services were reached from outside the house, and through which path?
+-- Tables: connection, service, device. The service join uses all three key columns.
 SELECT d.name AS device, s.service_name, s.port, s.protocol, c.access_path,
        COUNT(*) AS connections, MAX(c.started_at) AS last_seen_utc
 FROM connection c
@@ -57,6 +77,7 @@ ORDER BY connections DESC;
 --    Inner query "h" counts connections per device per local hour.
 --    Inner query "m" finds each device's biggest count. Joining them keeps the busiest hour.
 --    (-06:00 is US Central standard time.)
+-- Tables: connection, interface, device, inside two subqueries.
 SELECT h.name, h.local_hour, h.connections
 FROM (
     SELECT d.device_id, d.name,
@@ -87,6 +108,7 @@ ORDER BY h.name;
 --    never contacted before?
 --    NOT EXISTS throws out any device + organization pair that also shows up
 --    before the week started.
+-- Tables: connection, interface, device, organization, plus a subquery.
 SELECT d.name AS device, o.org_name, o.country,
        MIN(c.started_at) AS first_contact_utc, COUNT(*) AS connections
 FROM connection c
@@ -109,6 +131,7 @@ ORDER BY first_contact_utc DESC;
 -- 7. Which inbound connections hit a port that isn't registered as a service?
 --    No TARGETS link = the three svc_ columns are NULL.
 --    LEFT JOIN because some outside addresses have no organization.
+-- Tables: connection, interface, device, organization.
 SELECT c.connection_id, c.started_at AS started_utc, d.name AS device,
        c.local_port, c.protocol, c.remote_ip, o.org_name, c.access_path
 FROM connection c
@@ -122,6 +145,7 @@ ORDER BY c.started_at DESC;
 
 -- 8. What IP addresses has my laptop had over the past month?
 --    There is no IP history table. The history comes out of the connection log.
+-- Tables: connection, interface, device.
 SELECT i.if_type, i.mac_address, c.local_ip,
        MIN(c.started_at) AS first_seen_utc, MAX(c.started_at) AS last_seen_utc,
        COUNT(*) AS connections

@@ -1,14 +1,35 @@
 <?php
-// Add interface #1: log one connection by hand.
-// The form only asks for what a log line would contain. The page works out the
-// links to the other tables before it inserts:
-//   1. interface -> device          (which device the chosen MAC belongs to)
-//   2. local IP                     (reuse the interface's latest one if left blank)
-//   3. TARGETS link to service      (match on device + port + protocol)
-//   4. BELONGS TO link to organization (reuse the one already known for that remote IP)
-//   5. INSERT into connection
+/*
+ * add_connection.php  (the ADD interface: log one connection by hand)
+ *
+ * WHAT THIS FILE DOES
+ * Shows a form for entering one connection, and when the form is submitted,
+ * inserts one row into the connection table.
+ *
+ * WHY IT COUNTS AS NON-TRIVIAL
+ * The form only asks for what a raw log line would contain (which interface,
+ * IPs, ports, bytes). A connection row also has three foreign keys, and the
+ * user does not type those. The page looks them up in the other tables first:
+ *   step 1  interface + device   which device the chosen MAC address belongs to
+ *   step 2  connection           the interface's latest local IP, if left blank
+ *   step 3  service              the service that was hit (the TARGETS relationship),
+ *                                matched on device + port + protocol
+ *   step 4  organization         who owns the remote IP (the BELONGS TO relationship),
+ *                                taken from earlier connections to the same address
+ *   step 5  INSERT into connection with those links filled in
+ * This is the same shape as the bicycle reservation example in the assignment:
+ * check the other tables, then insert a row that links to existing rows.
+ *
+ * HOW ONE FILE IS BOTH THE FORM AND THE HANDLER
+ * The form posts back to this same file. A normal visit is a GET request, so the
+ * big if-block in section 3 is skipped and only the empty form is printed. Pressing
+ * Save sends a POST request, so the if-block runs first and then the form is
+ * printed again with a success or error message above it.
+ */
+
 require_once __DIR__ . "/db.php";
 
+// ---- Section 1: fixed rules and dropdown contents ----
 // which access paths make sense for each direction
 $allowed_paths = [
     "outbound" => ["internet"],
@@ -16,6 +37,7 @@ $allowed_paths = [
     "internal" => ["lan", "tailscale"],
 ];
 
+// dropdown of my interfaces: MAC address => "device / type (MAC)". Joins interface to device.
 $interfaces = [];
 foreach (rows(
     "SELECT i.mac_address, d.name, i.if_type
@@ -24,11 +46,13 @@ foreach (rows(
 ) as $i) {
     $interfaces[$i["mac_address"]] = $i["name"] . " / " . $i["if_type"] . " (" . $i["mac_address"] . ")";
 }
+// dropdown of organizations. The empty value means let step 4 work it out.
 $orgs = ["" => "auto (look up by remote IP)"];
 foreach (rows("SELECT org_id, org_name FROM organization ORDER BY org_name") as $o) {
     $orgs[$o["org_id"]] = $o["org_name"];
 }
 
+// ---- Section 2: variables for this request ----
 $error = "";
 $saved = [];   // lines describing what was saved and what it got linked to
 $f = [         // form values, kept so the form refills after a submit
@@ -37,10 +61,14 @@ $f = [         // form values, kept so the form refills after a submit
     "org_id" => "", "bytes_sent" => "0", "bytes_received" => "0", "seconds" => "60",
 ];
 
+// ---- Section 3: handle a submitted form ----
+// Only runs when Save was pressed. A plain page visit skips all of this.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // copy what the user typed over the defaults. trim() removes stray spaces.
     foreach ($f as $key => $default) {
         $f[$key] = trim($_POST[$key] ?? $default);
     }
+    // numbers are forced to integers. max(0, ...) stops negative byte counts.
     $local_port  = (int) $f["local_port"];
     $remote_port = (int) $f["remote_port"];
     $sent        = max(0, (int) $f["bytes_sent"]);
@@ -67,6 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $local_ip = $last ? $last[0]["local_ip"] : "";
     }
 
+    // validation: checked in order, and the first one that fails sets $error.
+    // Only when every check passes does the final else run and save anything.
     if (!$device) {
         $error = "Pick an interface.";
     } elseif (!isset($allowed_paths[$f["direction"]])) {
@@ -162,11 +192,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                      direction, access_path, source)
                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
                          UTC_TIMESTAMP() - INTERVAL ? SECOND, UTC_TIMESTAMP(), ?, ?, ?, ?, 'manual')",
+                // bind_param types, one letter per ? above in order: s = string, i = integer.
+                // A PHP null is sent as SQL NULL, which is how the optional links are left empty.
                 "siiissisisiiiss",
                 [$f["mac"], $org_id, $svc_device_id, $svc_port, $svc_protocol,
                  $local_ip, $local_port, $f["remote_ip"], $remote_port, $f["protocol"],
                  $seconds, $sent, $received, $f["direction"], $f["access_path"]]
             );
+            // insert_id is the auto-increment id MySQL just assigned
             array_unshift($saved, "Saved connection #" . db()->insert_id . ".");
         } catch (mysqli_sql_exception $e) {
             $saved = [];
@@ -175,6 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// ---- Section 4: output ----
 page_header("Log a connection");
 ?>
 <p class="hint">
@@ -183,6 +217,7 @@ page_header("Log a connection");
     Change the local port to 23 and it is saved with no service, which makes it show up in report 7.
 </p>
 
+<?php /* Message area: a red box for an error, or a green box listing what was saved and linked. */ ?>
 <?php if ($error): ?>
     <p class="error"><?php echo h($error); ?></p>
 <?php endif; ?>
@@ -195,6 +230,9 @@ page_header("Log a connection");
     </div>
 <?php endif; ?>
 
+<?php /* The form. method="post" because it changes data. Each input's name="..." is the
+   key it arrives under in $_POST. value=... refills what the user typed, so a
+   failed validation does not wipe the form. */ ?>
 <form class="grid panel" method="post" action="add_connection.php">
     <label>My interface
         <select name="mac" required><?php echo options(["" => "choose..."] + $interfaces, $f["mac"]); ?></select>
